@@ -1,0 +1,2 @@
+# YTThirdPlatformManager
+iOS第三方平台集成组件化

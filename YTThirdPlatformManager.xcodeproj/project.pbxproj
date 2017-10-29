@@ -52,8 +52,6 @@
 		9C3742B81FA370F00086E874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3742B61FA370F00086E874 /* Main.storyboard */; };
 		9C3742BA1FA370F00086E874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3742B91FA370F00086E874 /* Assets.xcassets */; };
 		9C3742BD1FA370F00086E874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3742BB1FA370F00086E874 /* LaunchScreen.storyboard */; };
-		9C3742C81FA370F00086E874 /* YTThirdPlatformManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742C71FA370F00086E874 /* YTThirdPlatformManagerTests.m */; };
-		9C3742D31FA370F00086E874 /* YTThirdPlatformManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742D21FA370F00086E874 /* YTThirdPlatformManagerUITests.m */; };
 		9C3743091FA371160086E874 /* PTAlipayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742E31FA371160086E874 /* PTAlipayManager.m */; };
 		9C37430A1FA371160086E874 /* PTAlipayRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742E51FA371160086E874 /* PTAlipayRequestHandler.m */; };
 		9C37430B1FA371160086E874 /* PTAlipayRespManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742E71FA371160086E874 /* PTAlipayRespManager.m */; };
@@ -74,23 +72,6 @@
 		9C3743251FA372200086E874 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C37431C1FA372200086E874 /* AlipaySDK.framework */; };
 		9C3743271FA372200086E874 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3743231FA372200086E874 /* TencentOpenAPI.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9C3742C41FA370F00086E874 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C3742A21FA370EF0086E874 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C3742A91FA370EF0086E874;
-			remoteInfo = YTThirdPlatformManager;
-		};
-		9C3742CF1FA370F00086E874 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C3742A21FA370EF0086E874 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C3742A91FA370EF0086E874;
-			remoteInfo = YTThirdPlatformManager;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01EFDBB75F3EC5AC6E80A83D /* Pods-YTThirdPlatformManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,10 +98,8 @@
 		9C3742B91FA370F00086E874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3742BC1FA370F00086E874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3742BE1FA370F00086E874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C3742C31FA370F00086E874 /* YTThirdPlatformManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTThirdPlatformManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3742C71FA370F00086E874 /* YTThirdPlatformManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTThirdPlatformManagerTests.m; sourceTree = "<group>"; };
 		9C3742C91FA370F00086E874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C3742CE1FA370F00086E874 /* YTThirdPlatformManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTThirdPlatformManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3742D21FA370F00086E874 /* YTThirdPlatformManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTThirdPlatformManagerUITests.m; sourceTree = "<group>"; };
 		9C3742D41FA370F00086E874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3742E21FA371160086E874 /* PTAlipayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAlipayManager.h; sourceTree = "<group>"; };
@@ -192,20 +171,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C3742C01FA370F00086E874 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C3742CB1FA370F00086E874 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -253,8 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				9C3742AA1FA370EF0086E874 /* YTThirdPlatformManager.app */,
-				9C3742C31FA370F00086E874 /* YTThirdPlatformManagerTests.xctest */,
-				9C3742CE1FA370F00086E874 /* YTThirdPlatformManagerUITests.xctest */,
 				9C1FD1971FA555A1009F10D2 /* YTThirdPlatformManagerDeveloper.app */,
 			);
 			name = Products;
@@ -477,42 +440,6 @@
 			productReference = 9C3742AA1FA370EF0086E874 /* YTThirdPlatformManager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C3742C21FA370F00086E874 /* YTThirdPlatformManagerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C3742DA1FA370F00086E874 /* Build configuration list for PBXNativeTarget "YTThirdPlatformManagerTests" */;
-			buildPhases = (
-				9C3742BF1FA370F00086E874 /* Sources */,
-				9C3742C01FA370F00086E874 /* Frameworks */,
-				9C3742C11FA370F00086E874 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C3742C51FA370F00086E874 /* PBXTargetDependency */,
-			);
-			name = YTThirdPlatformManagerTests;
-			productName = YTThirdPlatformManagerTests;
-			productReference = 9C3742C31FA370F00086E874 /* YTThirdPlatformManagerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9C3742CD1FA370F00086E874 /* YTThirdPlatformManagerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C3742DD1FA370F00086E874 /* Build configuration list for PBXNativeTarget "YTThirdPlatformManagerUITests" */;
-			buildPhases = (
-				9C3742CA1FA370F00086E874 /* Sources */,
-				9C3742CB1FA370F00086E874 /* Frameworks */,
-				9C3742CC1FA370F00086E874 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C3742D01FA370F00086E874 /* PBXTargetDependency */,
-			);
-			name = YTThirdPlatformManagerUITests;
-			productName = YTThirdPlatformManagerUITests;
-			productReference = 9C3742CE1FA370F00086E874 /* YTThirdPlatformManagerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -525,16 +452,6 @@
 					9C3742A91FA370EF0086E874 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
-					};
-					9C3742C21FA370F00086E874 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 9C3742A91FA370EF0086E874;
-					};
-					9C3742CD1FA370F00086E874 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 9C3742A91FA370EF0086E874;
 					};
 				};
 			};
@@ -552,8 +469,6 @@
 			projectRoot = "";
 			targets = (
 				9C3742A91FA370EF0086E874 /* YTThirdPlatformManager */,
-				9C3742C21FA370F00086E874 /* YTThirdPlatformManagerTests */,
-				9C3742CD1FA370F00086E874 /* YTThirdPlatformManagerUITests */,
 				9C1FD16D1FA555A1009F10D2 /* YTThirdPlatformManagerDeveloper */,
 			);
 		};
@@ -579,20 +494,6 @@
 				9C3742BA1FA370F00086E874 /* Assets.xcassets in Resources */,
 				9C3743241FA372200086E874 /* AlipaySDK.bundle in Resources */,
 				9C3742B81FA370F00086E874 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C3742C11FA370F00086E874 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C3742CC1FA370F00086E874 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,36 +655,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C3742BF1FA370F00086E874 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C3742C81FA370F00086E874 /* YTThirdPlatformManagerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C3742CA1FA370F00086E874 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C3742D31FA370F00086E874 /* YTThirdPlatformManagerUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9C3742C51FA370F00086E874 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C3742A91FA370EF0086E874 /* YTThirdPlatformManager */;
-			targetProxy = 9C3742C41FA370F00086E874 /* PBXContainerItemProxy */;
-		};
-		9C3742D01FA370F00086E874 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C3742A91FA370EF0086E874 /* YTThirdPlatformManager */;
-			targetProxy = 9C3742CF1FA370F00086E874 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9C3742B61FA370F00086E874 /* Main.storyboard */ = {
@@ -971,52 +843,6 @@
 			};
 			name = Release;
 		};
-		9C3742DB1FA370F00086E874 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YTThirdPlatformManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YTT.YTThirdPlatformManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YTThirdPlatformManager.app/YTThirdPlatformManager";
-			};
-			name = Debug;
-		};
-		9C3742DC1FA370F00086E874 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YTThirdPlatformManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YTT.YTThirdPlatformManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YTThirdPlatformManager.app/YTThirdPlatformManager";
-			};
-			name = Release;
-		};
-		9C3742DE1FA370F00086E874 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YTThirdPlatformManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YTT.YTThirdPlatformManagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = YTThirdPlatformManager;
-			};
-			name = Debug;
-		};
-		9C3742DF1FA370F00086E874 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YTThirdPlatformManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YTT.YTThirdPlatformManagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = YTThirdPlatformManager;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1043,24 +869,6 @@
 			buildConfigurations = (
 				9C3742D81FA370F00086E874 /* Debug */,
 				9C3742D91FA370F00086E874 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C3742DA1FA370F00086E874 /* Build configuration list for PBXNativeTarget "YTThirdPlatformManagerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C3742DB1FA370F00086E874 /* Debug */,
-				9C3742DC1FA370F00086E874 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C3742DD1FA370F00086E874 /* Build configuration list for PBXNativeTarget "YTThirdPlatformManagerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C3742DE1FA370F00086E874 /* Debug */,
-				9C3742DF1FA370F00086E874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

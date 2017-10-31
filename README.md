@@ -74,7 +74,7 @@ APPID、APPKEY配置放置在`PTThirdPlatformConfigConst.h`文件中统一管理
 以微信平台为例，生成三个平台相关的类文件：  
 ![微信平台文件](https://gitee.com/uploads/images/2017/1101/073749_321dd6da_300384.png "微信平台文件图.png")  
 
-- 在配置中配置第三方平台管理类  
+- 在配置中配置第三方平台管理类以及不同的类型对应的管理类  
 
 ```objc
 // 配置管理类

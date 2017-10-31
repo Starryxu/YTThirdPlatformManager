@@ -48,7 +48,7 @@ DEF_SINGLETON
  第三方登录
  
  @param thirdPlatformType 第三方平台
- @param fromViewController 从哪个页面调用的分享
+ @param viewController 从哪个页面调用的分享
  @param callback 登录回调
  */
 - (void)signInWithType:(PTThirdPlatformType)thirdPlatformType
@@ -121,6 +121,7 @@ DEF_SINGLETON
     return manager;
 }
 
+// 配置管理类
 - (NSArray*)thirdPlatformManagerClasses {
     return @[@"PTAlipayManager",
              @"PTTencentManager",
@@ -129,6 +130,7 @@ DEF_SINGLETON
              ];
 }
 
+// 配置第三方登录对应的管理类
 - (NSDictionary*)thirdPlatformSigninManagerConfig {
     return @{
              @(PTThirdPlatformTypeWechat): @"PTWXManager",
@@ -137,6 +139,7 @@ DEF_SINGLETON
              };
 }
 
+// 配置第三方支付对应的管理类
 - (NSDictionary*)thirdPlatformPayManagerConfig {
     return @{
              @(PaymentMethodTypeWechat): @"PTWXManager",
@@ -144,6 +147,7 @@ DEF_SINGLETON
              };
 }
 
+// 配置第三方分享对应的管理类
 - (NSDictionary*)thirdPlatformShareManagerConfig {
     return @{
              @(PaymentMethodTypeWechat): @"PTWXManager",

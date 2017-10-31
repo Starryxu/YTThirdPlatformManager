@@ -44,7 +44,7 @@ DEF_SINGLETON
  第三方登录
  
  @param thirdPlatformType 第三方平台
- @param fromViewController 从哪个页面调用的分享
+ @param viewController 从哪个页面调用的分享
  @param callback 登录回调
  */
 - (void)signInWithType:(PTThirdPlatformType)thirdPlatformType fromViewController:(UIViewController *)viewController callback:(void (^)(ThirdPlatformUserInfo* userInfo, NSError* err))callback {

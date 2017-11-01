@@ -77,14 +77,25 @@ iOS第三方平台集成组件化
         }];
     }];
 ```
+
 ### 怎么配置
 #### SDK配置
 这部分可以参考各个平台的SDK配置，主要是配置KEY，APPID、infoplist、依赖库等信息，这里就不再一一例举了。  
-APPID、APPKEY配置放置在`PTThirdPlatformConfigConst.h`文件中统一管理，`PTThirdPlatformConfigConst.h`文件在该项目中没有配置，需要自行配置，创建一个Header类型的文件，命名为`PTThirdPlatformConfigConst.h`即可，对应的KEY可以从`PTThirdPlatformConfigConstTemplate`文件中拷贝，Key对应的值配置为你申请的SDK的值即可。  
-![创建配置文件](https://gitee.com/uploads/images/2017/1101/122342_915156da_300384.png "创建配置文件.png")  
+
+- `PTThirdPlatformConfigConst.h` 配置文件  
+
+APPID、APPKEY配置放置在 `PTThirdPlatformConfigConst.h` 文件中统一管理， `PTThirdPlatformConfigConst.h` 文件在该项目中没有配置，需要自行配置，创建一个Header类型的文件，命名为 `PTThirdPlatformConfigConst.h` 即可，对应的KEY可以从 `PTThirdPlatformConfigConstTemplate `文件中拷贝，Key对应的值配置为你申请的SDK的值即可。  
+
+![创建配置文件](https://gitee.com/uploads/images/2017/1101/122342_915156da_300384.png "创建配置文件.png") 
+
+- URL Types 配置  
+
+这些配置使用到的key或者APPID部分需要自行完善，其中，**调用支付宝支付的 URL Schemes 代码调用和URL Types中的配置要保持一致**。  
+![URL Types 配置](https://gitee.com/uploads/images/2017/1101/123222_94d68dd5_300384.png "URL Types.png")   
 
 
-#### 添加了新的第三方SDK
+#### 添加了新的第三方SDK 
+
 添加了新的第三方SDK，在SDK配置这个步骤好了之后，需要做以下事情
 - 继承`PTBaseThirdPlatformManager`类生成一个第三方SDK的管理器
 - 实现`PTAbsThirdPlatformRequestHandler`接口生成一个第三发SDK的底层调用

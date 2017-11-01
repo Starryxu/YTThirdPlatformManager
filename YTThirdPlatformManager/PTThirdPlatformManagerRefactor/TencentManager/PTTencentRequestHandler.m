@@ -19,20 +19,15 @@
 }
 
 // 分享
-+ (BOOL)sendMessageWithImage:(UIImage*)image
-              imageUrlString:(NSString*)imageUrlString
-                   urlString:(NSString*)urlString
-                       title:(NSString*)title
-                        text:(NSString*)text
-                   shareType:(PTShareType)shareType {
++ (BOOL)sendMessageWithModel:(ThirdPlatformShareModel *)model {
     QQApiNewsObject *newsObj = [QQApiNewsObject
-                                objectWithURL:[NSURL URLWithString:ValueOrEmpty(urlString)]
-                                title:title
-                                description:text
-                                previewImageURL:[NSURL URLWithString:ValueOrEmpty(imageUrlString)]];
+                                objectWithURL:[NSURL URLWithString:ValueOrEmpty(model.urlString)]
+                                title:model.title
+                                description:model.text
+                                previewImageURL:[NSURL URLWithString:ValueOrEmpty(model.imageUrlString)]];
     SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
     QQApiSendResultCode sent = 0;
-    if (PTShareTypeQQ == shareType) {
+    if (PTShareTypeQQ == model.platform) {
         //将内容分享到qq
         sent = [QQApiInterface sendReq:req];
     } else {

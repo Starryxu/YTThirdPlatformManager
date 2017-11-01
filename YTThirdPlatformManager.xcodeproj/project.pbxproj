@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6974ECAD28D19CC7024FA6F0 /* libPods-YTThirdPlatformManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B397C4A6F5D2E88F15D49222 /* libPods-YTThirdPlatformManager.a */; };
+		85F1090D5865B0A9602FDE6C /* libPods-YTThirdPlatformManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B397C4A6F5D2E88F15D49222 /* libPods-YTThirdPlatformManager.a */; };
 		9C1FD15D1FA494B8009F10D2 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD15B1FA494B8009F10D2 /* UIImage+Util.m */; };
 		9C1FD1601FA496DA009F10D2 /* NSData+NSJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD15F1FA496DA009F10D2 /* NSData+NSJSON.m */; };
 		9C1FD1631FA49740009F10D2 /* NetworkRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD1621FA49740009F10D2 /* NetworkRequestUtil.m */; };
@@ -39,13 +40,13 @@
 		9C1FD1861FA555A1009F10D2 /* PTWeiboRespManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3743011FA371160086E874 /* PTWeiboRespManager.m */; };
 		9C1FD1871FA555A1009F10D2 /* PTAlipayRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742E51FA371160086E874 /* PTAlipayRequestHandler.m */; };
 		9C1FD1891FA555A1009F10D2 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1FD1641FA4989E009F10D2 /* CoreMotion.framework */; };
-		9C1FD18A1FA555A1009F10D2 /* libPods-YTThirdPlatformManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B397C4A6F5D2E88F15D49222 /* libPods-YTThirdPlatformManager.a */; };
 		9C1FD18B1FA555A1009F10D2 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3743231FA372200086E874 /* TencentOpenAPI.framework */; };
 		9C1FD18C1FA555A1009F10D2 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C37431C1FA372200086E874 /* AlipaySDK.framework */; };
 		9C1FD18E1FA555A1009F10D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3742BB1FA370F00086E874 /* LaunchScreen.storyboard */; };
 		9C1FD18F1FA555A1009F10D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3742B91FA370F00086E874 /* Assets.xcassets */; };
 		9C1FD1901FA555A1009F10D2 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C37431B1FA372200086E874 /* AlipaySDK.bundle */; };
 		9C1FD1911FA555A1009F10D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3742B61FA370F00086E874 /* Main.storyboard */; };
+		9C3461CD1FA9770400D1616E /* YTThirdPlatformManagerDeveloper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C3461CC1FA9770400D1616E /* YTThirdPlatformManagerDeveloper-Info.plist */; };
 		9C3742AF1FA370F00086E874 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742AE1FA370F00086E874 /* main.m */; };
 		9C3742B21FA370F00086E874 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742B11FA370F00086E874 /* AppDelegate.m */; };
 		9C3742B51FA370F00086E874 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3742B41FA370F00086E874 /* ViewController.m */; };
@@ -71,11 +72,12 @@
 		9C3743241FA372200086E874 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C37431B1FA372200086E874 /* AlipaySDK.bundle */; };
 		9C3743251FA372200086E874 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C37431C1FA372200086E874 /* AlipaySDK.framework */; };
 		9C3743271FA372200086E874 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3743231FA372200086E874 /* TencentOpenAPI.framework */; };
+		CF4E7703F4B911938A4FDCB6 /* libPods-YTThirdPlatformManagerDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C990F1E0096242C755777E /* libPods-YTThirdPlatformManagerDeveloper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01EFDBB75F3EC5AC6E80A83D /* Pods-YTThirdPlatformManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager.release.xcconfig"; sourceTree = "<group>"; };
-		12BFCC70565746FEF1DCD9BC /* Pods-YTThirdPlatformManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager.debug.xcconfig"; sourceTree = "<group>"; };
+		35C990F1E0096242C755777E /* libPods-YTThirdPlatformManagerDeveloper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTThirdPlatformManagerDeveloper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		699959A85BEF2F5DE57F03DE /* Pods-YTThirdPlatformManagerDeveloper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManagerDeveloper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManagerDeveloper/Pods-YTThirdPlatformManagerDeveloper.debug.xcconfig"; sourceTree = "<group>"; };
 		9C1FD15B1FA494B8009F10D2 /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		9C1FD15C1FA494B8009F10D2 /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
 		9C1FD15E1FA496D9009F10D2 /* NSData+NSJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NSJSON.h"; sourceTree = "<group>"; };
@@ -87,7 +89,8 @@
 		9C1FD1681FA4C011009F10D2 /* BaseTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTestViewController.m; sourceTree = "<group>"; };
 		9C1FD16C1FA55536009F10D2 /* PTThirdPlatformConfigConstTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTThirdPlatformConfigConstTemplate.h; sourceTree = "<group>"; };
 		9C1FD1971FA555A1009F10D2 /* YTThirdPlatformManagerDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTThirdPlatformManagerDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C1FD1981FA555A1009F10D2 /* YTThirdPlatformManagerDeveloper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = YTThirdPlatformManagerDeveloper.plist; path = /Users/aron/GitRepo/YTThirdPlatformManager/YTThirdPlatformManager/YTThirdPlatformManagerDeveloper.plist; sourceTree = "<absolute>"; };
+		9C3461CB1FA976A600D1616E /* PTThirdPlatformConfigConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTThirdPlatformConfigConst.h; sourceTree = "<group>"; };
+		9C3461CC1FA9770400D1616E /* YTThirdPlatformManagerDeveloper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YTThirdPlatformManagerDeveloper-Info.plist"; sourceTree = "<group>"; };
 		9C3742AA1FA370EF0086E874 /* YTThirdPlatformManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTThirdPlatformManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3742AE1FA370F00086E874 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C3742B01FA370F00086E874 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,10 +101,6 @@
 		9C3742B91FA370F00086E874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3742BC1FA370F00086E874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3742BE1FA370F00086E874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C3742C71FA370F00086E874 /* YTThirdPlatformManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTThirdPlatformManagerTests.m; sourceTree = "<group>"; };
-		9C3742C91FA370F00086E874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C3742D21FA370F00086E874 /* YTThirdPlatformManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTThirdPlatformManagerUITests.m; sourceTree = "<group>"; };
-		9C3742D41FA370F00086E874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3742E21FA371160086E874 /* PTAlipayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAlipayManager.h; sourceTree = "<group>"; };
 		9C3742E31FA371160086E874 /* PTAlipayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAlipayManager.m; sourceTree = "<group>"; };
 		9C3742E41FA371160086E874 /* PTAlipayRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAlipayRequestHandler.h; sourceTree = "<group>"; };
@@ -141,11 +140,13 @@
 		9C37431B1FA372200086E874 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
 		9C37431C1FA372200086E874 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		9C3743231FA372200086E874 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
-		9C3743281FA374130086E874 /* PTThirdPlatformConfigConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTThirdPlatformConfigConst.h; sourceTree = "<group>"; };
 		9CB654271FA49251002A6EBF /* UtilMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilMacro.h; sourceTree = "<group>"; };
 		9CB654291FA492EE002A6EBF /* PTOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOrderModel.h; sourceTree = "<group>"; };
 		9CB6542A1FA492EE002A6EBF /* PTOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTOrderModel.m; sourceTree = "<group>"; };
 		B397C4A6F5D2E88F15D49222 /* libPods-YTThirdPlatformManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTThirdPlatformManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B831437AD6ECD9FEF12E90F5 /* Pods-YTThirdPlatformManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager.release.xcconfig"; sourceTree = "<group>"; };
+		DE011C11E3A98CF0F75E1A67 /* Pods-YTThirdPlatformManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager.debug.xcconfig"; sourceTree = "<group>"; };
+		FF2803C04C652B91CD42A902 /* Pods-YTThirdPlatformManagerDeveloper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTThirdPlatformManagerDeveloper.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTThirdPlatformManagerDeveloper/Pods-YTThirdPlatformManagerDeveloper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,9 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1FD1891FA555A1009F10D2 /* CoreMotion.framework in Frameworks */,
-				9C1FD18A1FA555A1009F10D2 /* libPods-YTThirdPlatformManager.a in Frameworks */,
 				9C1FD18B1FA555A1009F10D2 /* TencentOpenAPI.framework in Frameworks */,
 				9C1FD18C1FA555A1009F10D2 /* AlipaySDK.framework in Frameworks */,
+				CF4E7703F4B911938A4FDCB6 /* libPods-YTThirdPlatformManagerDeveloper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +169,7 @@
 				6974ECAD28D19CC7024FA6F0 /* libPods-YTThirdPlatformManager.a in Frameworks */,
 				9C3743271FA372200086E874 /* TencentOpenAPI.framework in Frameworks */,
 				9C3743251FA372200086E874 /* AlipaySDK.framework in Frameworks */,
+				85F1090D5865B0A9602FDE6C /* libPods-YTThirdPlatformManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +179,10 @@
 		0E2A480DD726F7934BF8755D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				12BFCC70565746FEF1DCD9BC /* Pods-YTThirdPlatformManager.debug.xcconfig */,
-				01EFDBB75F3EC5AC6E80A83D /* Pods-YTThirdPlatformManager.release.xcconfig */,
+				DE011C11E3A98CF0F75E1A67 /* Pods-YTThirdPlatformManager.debug.xcconfig */,
+				B831437AD6ECD9FEF12E90F5 /* Pods-YTThirdPlatformManager.release.xcconfig */,
+				699959A85BEF2F5DE57F03DE /* Pods-YTThirdPlatformManagerDeveloper.debug.xcconfig */,
+				FF2803C04C652B91CD42A902 /* Pods-YTThirdPlatformManagerDeveloper.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -188,6 +192,7 @@
 			children = (
 				9C1FD1641FA4989E009F10D2 /* CoreMotion.framework */,
 				B397C4A6F5D2E88F15D49222 /* libPods-YTThirdPlatformManager.a */,
+				35C990F1E0096242C755777E /* libPods-YTThirdPlatformManagerDeveloper.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,8 +211,6 @@
 			children = (
 				9C3743191FA372200086E874 /* Vender */,
 				9C3742AC1FA370F00086E874 /* YTThirdPlatformManager */,
-				9C3742C61FA370F00086E874 /* YTThirdPlatformManagerTests */,
-				9C3742D11FA370F00086E874 /* YTThirdPlatformManagerUITests */,
 				9C3742AB1FA370EF0086E874 /* Products */,
 				0E2A480DD726F7934BF8755D /* Pods */,
 				265635B6273822F49C82E7C8 /* Frameworks */,
@@ -236,7 +239,7 @@
 				9C3742B91FA370F00086E874 /* Assets.xcassets */,
 				9C3742BB1FA370F00086E874 /* LaunchScreen.storyboard */,
 				9C3742BE1FA370F00086E874 /* Info.plist */,
-				9C1FD1981FA555A1009F10D2 /* YTThirdPlatformManagerDeveloper.plist */,
+				9C3461CC1FA9770400D1616E /* YTThirdPlatformManagerDeveloper-Info.plist */,
 				9C3742AD1FA370F00086E874 /* Supporting Files */,
 			);
 			path = YTThirdPlatformManager;
@@ -250,30 +253,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9C3742C61FA370F00086E874 /* YTThirdPlatformManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				9C3742C71FA370F00086E874 /* YTThirdPlatformManagerTests.m */,
-				9C3742C91FA370F00086E874 /* Info.plist */,
-			);
-			path = YTThirdPlatformManagerTests;
-			sourceTree = "<group>";
-		};
-		9C3742D11FA370F00086E874 /* YTThirdPlatformManagerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9C3742D21FA370F00086E874 /* YTThirdPlatformManagerUITests.m */,
-				9C3742D41FA370F00086E874 /* Info.plist */,
-			);
-			path = YTThirdPlatformManagerUITests;
-			sourceTree = "<group>";
-		};
 		9C3742E01FA371160086E874 /* PTThirdPlatformManagerRefactor */ = {
 			isa = PBXGroup;
 			children = (
 				9CB654281FA492EE002A6EBF /* Model */,
 				9CB654261FA49169002A6EBF /* util */,
-				9C3743281FA374130086E874 /* PTThirdPlatformConfigConst.h */,
+				9C3461CB1FA976A600D1616E /* PTThirdPlatformConfigConst.h */,
 				9C1FD16C1FA55536009F10D2 /* PTThirdPlatformConfigConstTemplate.h */,
 				9C3742F11FA371160086E874 /* PTThirdPlatformDefine.h */,
 				9C3742F21FA371160086E874 /* PTThirdPlatformObject.h */,
@@ -404,12 +389,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C1FD1941FA555A1009F10D2 /* Build configuration list for PBXNativeTarget "YTThirdPlatformManagerDeveloper" */;
 			buildPhases = (
-				9C1FD16E1FA555A1009F10D2 /* [CP] Check Pods Manifest.lock */,
+				797CD5DCC716F7AF621534D0 /* [CP] Check Pods Manifest.lock */,
 				9C1FD16F1FA555A1009F10D2 /* Sources */,
 				9C1FD1881FA555A1009F10D2 /* Frameworks */,
 				9C1FD18D1FA555A1009F10D2 /* Resources */,
-				9C1FD1921FA555A1009F10D2 /* [CP] Embed Pods Frameworks */,
-				9C1FD1931FA555A1009F10D2 /* [CP] Copy Pods Resources */,
+				C099B799EF583D714ED06EDB /* [CP] Embed Pods Frameworks */,
+				42486CF8AB55216A72D870AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1FD18E1FA555A1009F10D2 /* LaunchScreen.storyboard in Resources */,
+				9C3461CD1FA9770400D1616E /* YTThirdPlatformManagerDeveloper-Info.plist in Resources */,
 				9C1FD18F1FA555A1009F10D2 /* Assets.xcassets in Resources */,
 				9C1FD1901FA555A1009F10D2 /* AlipaySDK.bundle in Resources */,
 				9C1FD1911FA555A1009F10D2 /* Main.storyboard in Resources */,
@@ -515,6 +501,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		42486CF8AB55216A72D870AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTThirdPlatformManagerDeveloper/Pods-YTThirdPlatformManagerDeveloper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A4B2BD1C2659762F74476D1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +529,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797CD5DCC716F7AF621534D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		88D38DBA6895EBDE02A126E0 /* [CP] Embed Pods Frameworks */ = {
@@ -545,22 +561,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C1FD16E1FA555A1009F10D2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9C1FD1921FA555A1009F10D2 /* [CP] Embed Pods Frameworks */ = {
+		C099B799EF583D714ED06EDB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -572,22 +573,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C1FD1931FA555A1009F10D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTThirdPlatformManager/Pods-YTThirdPlatformManager-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTThirdPlatformManagerDeveloper/Pods-YTThirdPlatformManagerDeveloper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -679,7 +665,7 @@
 /* Begin XCBuildConfiguration section */
 		9C1FD1951FA555A1009F10D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12BFCC70565746FEF1DCD9BC /* Pods-YTThirdPlatformManager.debug.xcconfig */;
+			baseConfigurationReference = 699959A85BEF2F5DE57F03DE /* Pods-YTThirdPlatformManagerDeveloper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -688,7 +674,8 @@
 					"$(PROJECT_DIR)/YTThirdPlatformManager/Vender/TencentOpenSDK",
 				);
 				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
-				INFOPLIST_FILE = YTThirdPlatformManager/YTThirdPlatformManagerDeveloper.plist;
+				INFOPLIST_FILE = "YTThirdPlatformManager/YTThirdPlatformManagerDeveloper-info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qingot.Plush;
@@ -698,7 +685,7 @@
 		};
 		9C1FD1961FA555A1009F10D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01EFDBB75F3EC5AC6E80A83D /* Pods-YTThirdPlatformManager.release.xcconfig */;
+			baseConfigurationReference = FF2803C04C652B91CD42A902 /* Pods-YTThirdPlatformManagerDeveloper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -707,7 +694,8 @@
 					"$(PROJECT_DIR)/YTThirdPlatformManager/Vender/TencentOpenSDK",
 				);
 				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
-				INFOPLIST_FILE = YTThirdPlatformManager/YTThirdPlatformManagerDeveloper.plist;
+				INFOPLIST_FILE = "YTThirdPlatformManager/YTThirdPlatformManagerDeveloper-info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qingot.Plush;
@@ -809,7 +797,7 @@
 		};
 		9C3742D81FA370F00086E874 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12BFCC70565746FEF1DCD9BC /* Pods-YTThirdPlatformManager.debug.xcconfig */;
+			baseConfigurationReference = DE011C11E3A98CF0F75E1A67 /* Pods-YTThirdPlatformManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -818,6 +806,7 @@
 					"$(PROJECT_DIR)/YTThirdPlatformManager/Vender/TencentOpenSDK",
 				);
 				INFOPLIST_FILE = YTThirdPlatformManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qingot.Plush;
@@ -827,7 +816,7 @@
 		};
 		9C3742D91FA370F00086E874 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01EFDBB75F3EC5AC6E80A83D /* Pods-YTThirdPlatformManager.release.xcconfig */;
+			baseConfigurationReference = B831437AD6ECD9FEF12E90F5 /* Pods-YTThirdPlatformManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -836,6 +825,7 @@
 					"$(PROJECT_DIR)/YTThirdPlatformManager/Vender/TencentOpenSDK",
 				);
 				INFOPLIST_FILE = YTThirdPlatformManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qingot.Plush;

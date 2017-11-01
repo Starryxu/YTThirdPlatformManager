@@ -42,28 +42,23 @@
 }
 
 // 分享
-+ (BOOL)sendMessageWithImage:(UIImage*)image
-              imageUrlString:(NSString*)imageUrlString
-                   urlString:(NSString*)urlString
-                       title:(NSString*)title
-                        text:(NSString*)text
-                   shareType:(PTShareType)shareType {
++ (BOOL)sendMessageWithModel:(ThirdPlatformShareModel*)model {
     enum WXScene wxScene = 0;
-    if (PTShareTypeWechat == shareType) {
+    if (PTShareTypeWechat == model.platform) {
         wxScene = WXSceneSession;
-    } else if (PTShareTypeWechatLine == shareType) {
+    } else if (PTShareTypeWechatLine == model.platform) {
         wxScene = WXSceneTimeline;
     }
     SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
     req.scene = wxScene;
     req.bText = NO;
     WXMediaMessage* msg = [[WXMediaMessage alloc] init];
-    msg.title = title;
-    msg.description = text;
-    [msg setThumbImage:[self scaledImageWithOriImage:image]];
-    if (urlString && urlString.length>0) {
+    msg.title = model.title;
+    msg.description = model.text;
+    [msg setThumbImage:[self scaledImageWithOriImage:model.image]];
+    if (model.urlString && model.urlString.length>0) {
         WXWebpageObject* webPageObj = [[WXWebpageObject alloc] init];
-        webPageObj.webpageUrl = urlString;
+        webPageObj.webpageUrl = model.urlString;
         msg.mediaObject = webPageObj;
     }
     req.message = msg;

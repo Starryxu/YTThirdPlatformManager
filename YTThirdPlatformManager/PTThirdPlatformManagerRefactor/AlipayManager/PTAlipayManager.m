@@ -62,10 +62,6 @@ DEF_SINGLETON
 
 /**
  第三方支付
- 
- @param payMethodType 支付平台
- @param order 支付订单模型
- @param paymentBlock 支付结果回调
  */
 - (void)payWithPlateform:(PTPaymentMethodType)payMethodType order:(PTOrderModel*)order paymentBlock:(void (^)(BOOL result))paymentBlock {
     self.paymentBlock = paymentBlock;

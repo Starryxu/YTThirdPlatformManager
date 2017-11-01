@@ -31,51 +31,29 @@
 
 /**
  第三方分享
- 
- @param platform 第三方分享平台
- @param image 分享的图片
- @param imageUrlString 分享的图片地址
- @param title 分享的标题
- @param text 分享的文字
- @param urlString 分享的URL
- @param fromViewController 从哪个页面调用的分享
- @param shareResultBlock 分享结果回调
  */
-- (void)shareToPlateform:(PTShareType)platform
-                   image:(UIImage*)image
-          imageUrlString:(NSString*)imageUrlString
-                   title:(NSString*)title
-                    text:(NSString*)text
-               urlString:(NSString*)urlString
-      fromViewController:(UIViewController*)fromViewController
-        shareResultBlock:(void (^) (PTShareType platform, PTShareResult shareResult, NSError* error))shareResultBlock {
+- (void)shareWithModel:(ThirdPlatformShareModel*)model {
     __block UIImage* sharedImage = nil;
-    if (image) {
-        sharedImage = image;
-        [self doShareToPlateform:platform image:sharedImage imageUrlString:imageUrlString title:title text:text urlString:urlString fromViewController:fromViewController shareResultBlock:shareResultBlock];
-    } else if (imageUrlString != nil) {
-        [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:imageUrlString] options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+    if (model.image) {
+        [self doShareWithModel:model];
+    } else if (model.imageUrlString != nil) {
+        [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:model.imageUrlString] options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
             if (image) {
                 sharedImage = image;
             } else {
                 sharedImage = [UIImage imageNamed:@"app_icon"];
             }
-            [self doShareToPlateform:platform image:sharedImage imageUrlString:imageUrlString title:title text:text urlString:urlString fromViewController:fromViewController shareResultBlock:shareResultBlock];
+            model.image = sharedImage;
+            [self doShareWithModel:model];
         }];
     } else {
-        sharedImage = [UIImage imageNamed:@"signin_logo"];
-        [self doShareToPlateform:platform image:sharedImage imageUrlString:imageUrlString title:title text:text urlString:urlString fromViewController:fromViewController shareResultBlock:shareResultBlock];
+        sharedImage = [UIImage imageNamed:@"app_icon"];
+        model.image = sharedImage;
+        [self doShareWithModel:model];
     }
 }
 
-- (void)doShareToPlateform:(PTShareType)platform
-                     image:(UIImage*)image
-            imageUrlString:(NSString*)imageUrlString
-                     title:(NSString*)title
-                      text:(NSString*)text
-                 urlString:(NSString*)urlString
-        fromViewController:(UIViewController*)fromViewController
-          shareResultBlock:(void (^) (PTShareType platform, PTShareResult shareResult, NSError* error))shareResultBlock {
+- (void)doShareWithModel:(ThirdPlatformShareModel*)model {
     // 空实现，子类实现该方法
 }
 
@@ -99,6 +77,11 @@
  */
 - (void)payWithPlateform:(PTPaymentMethodType)payMethodType order:(PTOrderModel*)order paymentBlock:(void (^)(BOOL result))paymentBlock {
     // 空实现，子类实现该方法
+}
+
+// APP是否安装
+- (BOOL)isThirdPlatformInstalled:(PTShareType)thirdPlatform {
+    return NO;
 }
 
 #pragma mark - ......::::::: PTAbsThirdPlatformRespManagerDelegate :::::::......

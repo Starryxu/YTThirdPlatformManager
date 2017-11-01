@@ -41,24 +41,8 @@
 
 /**
  第三方分享
-
- @param platform 第三方分享平台
- @param image 分享的图片
- @param imageUrlString 分享的图片地址
- @param title 分享的标题
- @param text 分享的文字
- @param urlString 分享的URL
- @param fromViewController 从哪个页面调用的分享
- @param shareResultBlock 分享结果回调
  */
-- (void)shareToPlateform:(PTShareType)platform
-                   image:(UIImage*)image
-          imageUrlString:(NSString*)imageUrlString
-                   title:(NSString*)title
-                    text:(NSString*)text
-               urlString:(NSString*)urlString
-      fromViewController:(UIViewController*)fromViewController
-        shareResultBlock:(void (^) (PTShareType platform, PTShareResult shareResult, NSError* error))shareResultBlock;
+- (void)shareWithModel:(ThirdPlatformShareModel*)model;
 
 /**
  第三方支付
@@ -70,5 +54,8 @@
 - (void)payWithPlateform:(PTPaymentMethodType)payMethodType 
                 order:(PTOrderModel*)order
                  paymentBlock:(void (^)(BOOL result))paymentBlock;
+
+// APP是否安装
+- (BOOL)isThirdPlatformInstalled:(PTShareType)thirdPlatform;
 
 @end

@@ -50,3 +50,14 @@
 }
 
 @end
+
+
+@implementation ThirdPlatformShareModel
+
+@end
+
+
+@implementation ThirdPlatformLoginModel
+
+@end
+

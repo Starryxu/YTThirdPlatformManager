@@ -38,22 +38,33 @@
         }];
     }];
     
+    // 分享模型
+    ThirdPlatformShareModel* shareModel = [[ThirdPlatformShareModel alloc] init];
+    shareModel.image = nil;
+    shareModel.imageUrlString = @"";
+    shareModel.title = @"title";
+    shareModel.text = @"text";
+    shareModel.weiboText = @"weibo text";
+    shareModel.urlString = @"http://www.baidu.com";
+    shareModel.fromViewController = self;
+    shareModel.shareResultBlock = ^(PTShareType pplatform, PTShareResult result, NSError * error) {
+
+    };
+
+    
     [self addActionWithName:@"QQ Share" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] shareToPlateform:PTShareTypeQQ image:nil imageUrlString:@"" title:@"title" text:@"text" urlString:@"http://www.baidu.com" fromViewController:weakSelf shareResultBlock:^(PTShareType platform, PTShareResult shareResult, NSError *error) {
-            
-        }];
+        shareModel.platform = PTShareTypeQQ;
+        [[PTThirdPlatformConfigManager sharedInstance] shareWithModel:shareModel];
     }];
     
     [self addActionWithName:@"Wechat Share" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] shareToPlateform:PTShareTypeWechat image:nil imageUrlString:@"" title:@"title" text:@"text" urlString:@"http://www.baidu.com" fromViewController:weakSelf shareResultBlock:^(PTShareType platform, PTShareResult shareResult, NSError *error) {
-            
-        }];
+        shareModel.platform = PTShareTypeWechat;
+        [[PTThirdPlatformConfigManager sharedInstance] shareWithModel:shareModel];
     }];
     
     [self addActionWithName:@"Weibo Share" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] shareToPlateform:PTShareTypeWeibo image:nil imageUrlString:@"" title:@"title" text:@"text" urlString:@"http://www.baidu.com" fromViewController:weakSelf shareResultBlock:^(PTShareType platform, PTShareResult shareResult, NSError *error) {
-            
-        }];
+        shareModel.platform = PTShareTypeWeibo;
+        [[PTThirdPlatformConfigManager sharedInstance] shareWithModel:shareModel];
     }];
     
     [self addActionWithName:@"Wechat Pay" callback:^{

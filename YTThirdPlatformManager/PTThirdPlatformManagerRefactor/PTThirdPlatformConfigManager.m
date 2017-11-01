@@ -61,36 +61,10 @@ DEF_SINGLETON
                    callback:callback];
 }
 
-/**
- 第三方分享
- 
- @param platform 第三方分享平台
- @param image 分享的图片
- @param imageUrlString 分享的图片地址
- @param title 分享的标题
- @param text 分享的文字
- @param urlString 分享的URL
- @param fromViewController 从哪个页面调用的分享
- @param shareResultBlock 分享结果回调
- */
-- (void)shareToPlateform:(PTShareType)platform
-                   image:(UIImage*)image
-          imageUrlString:(NSString*)imageUrlString
-                   title:(NSString*)title
-                    text:(NSString*)text
-               urlString:(NSString*)urlString
-      fromViewController:(UIViewController*)fromViewController
-        shareResultBlock:(void (^) (PTShareType platform, PTShareResult shareResult, NSError* error))shareResultBlock {
-    NSString* classString = [[self thirdPlatformShareManagerConfig] objectForKey:@(platform)];
+- (void)shareWithModel:(ThirdPlatformShareModel *)model {
+    NSString* classString = [[self thirdPlatformShareManagerConfig] objectForKey:@(model.platform)];
     id<PTAbsThirdPlatformManager> manager = [self managerFromClassString:classString];
-    [manager shareToPlateform:platform
-                        image:image
-               imageUrlString:imageUrlString
-                        title:title
-                         text:text
-                    urlString:urlString
-           fromViewController:fromViewController
-             shareResultBlock:shareResultBlock];
+    [manager shareWithModel:model];
 }
 
 /**
@@ -116,7 +90,11 @@ DEF_SINGLETON
     SEL sharedInstanceSelector = @selector(sharedInstance);
     id<PTAbsThirdPlatformManager> manager = nil;
     if(clz && [clz respondsToSelector:sharedInstanceSelector]){
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        // 这里的警告可以直接忽略，返回的是一个单例对象，不会有泄漏问题
         manager = [clz performSelector:sharedInstanceSelector];
+#pragma clang diagnostic pop
     }
     return manager;
 }

@@ -46,10 +46,6 @@ DEF_SINGLETON
 
 /**
  第三方登录
- 
- @param thirdPlatformType 第三方平台
- @param viewController 从哪个页面调用的分享
- @param callback 登录回调
  */
 - (void)signInWithType:(PTThirdPlatformType)thirdPlatformType fromViewController:(UIViewController *)viewController callback:(void (^)(ThirdPlatformUserInfo* userInfo, NSError* err))callback {
     self.callback = callback;
@@ -57,40 +53,18 @@ DEF_SINGLETON
     [PTTencentRequestHandler sendAuthInViewController:viewController];
 }
 
-- (void)doShareToPlateform:(PTShareType)platform
-                     image:(UIImage *)image
-            imageUrlString:(NSString *)imageUrlString
-                     title:(NSString *)title
-                      text:(NSString *)text
-                 urlString:(NSString *)urlString
-        fromViewController:(UIViewController *)fromViewController
-          shareResultBlock:(void (^)(PTShareType, PTShareResult, NSError *))shareResultBlock {
-    self.shareResultBlock = shareResultBlock;
-    [self doQQShareWithImage:image
-              imageUrlString:imageUrlString
-                   urlString:urlString
-                       title:title
-                        text:text
-                   shareType:platform
-          fromViewController:fromViewController];
-}
-
-// 分享到QQ
-- (void)doQQShareWithImage:(UIImage*)image
-            imageUrlString:(NSString*)imageUrlString
-                 urlString:(NSString*)urlString
-                     title:(NSString*)title
-                      text:(NSString*)text
-                 shareType:(PTShareType)shareType
-        fromViewController:(UIViewController*)fromViewController {
+// 分享
+- (void)doShareWithModel:(ThirdPlatformShareModel *)model {
+    self.shareResultBlock = model.shareResultBlock;
     [PTTencentRespManager sharedInstance].delegate = self;
-    BOOL shareResult = [PTTencentRequestHandler sendMessageWithImage:image imageUrlString:imageUrlString urlString:urlString title:title text:text shareType:shareType];
+    BOOL shareResult = [PTTencentRequestHandler sendMessageWithModel:model];
     if (shareResult == NO) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // [Dialog toast:_(@"Please install Wechat")];
-        });
         !self.shareResultBlock ?: self.shareResultBlock(PTShareTypeQQ, PTShareResultFailed, nil);
     }
+}
+
+- (BOOL)isThirdPlatformInstalled:(PTShareType)thirdPlatform {
+    return [TencentOAuth iphoneQQInstalled] || [TencentOAuth iphoneTIMInstalled];
 }
 
 @end

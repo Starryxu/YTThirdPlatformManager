@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "PTThirdPlatformDefine.h"
+#import "PTThirdPlatformObject.h"
 
 @class PTOrderModel;
 
@@ -23,11 +24,6 @@
 + (BOOL)payWithOrder:(PTOrderModel*)order;
 
 // 分享
-+ (BOOL)sendMessageWithImage:(UIImage*)image
-              imageUrlString:(NSString*)imageUrlString
-                   urlString:(NSString*)urlString
-                       title:(NSString*)title
-                        text:(NSString*)text
-                   shareType:(PTShareType)shareType;
++ (BOOL)sendMessageWithModel:(ThirdPlatformShareModel*)model;
 
 @end

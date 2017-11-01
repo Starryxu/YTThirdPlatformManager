@@ -5,12 +5,17 @@ iOS第三方平台集成组件化
 参考我的博客文章[iOS第三方平台集成组件化](https://my.oschina.net/u/1242477/blog/1557875)
 
 ### 怎么使用
+
+选择target ->  **YTThirdPlatformManager**    
+![选择target ](https://gitee.com/uploads/images/2017/1101/122559_d5531c56_300384.png "选择target.png")  
+
+示例代码：  
 下面是不同平台调用第三发SDK的登录、分享、支付的功能示例代码，具体的可以下载项目代码查看。
 ```objc    
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    typeof(self) __weak weakSelf = self;
+   typeof(self) __weak weakSelf = self;
     [self addActionWithName:@"QQ Login" callback:^{
         [[PTThirdPlatformConfigManager sharedInstance] signInWithType:PTThirdPlatformTypeTencentQQ fromViewController:weakSelf callback:^(ThirdPlatformUserInfo *userInfo, NSError *err) {
             
@@ -29,22 +34,33 @@ iOS第三方平台集成组件化
         }];
     }];
     
+    // 分享模型
+    ThirdPlatformShareModel* shareModel = [[ThirdPlatformShareModel alloc] init];
+    shareModel.image = nil;
+    shareModel.imageUrlString = @"";
+    shareModel.title = @"title";
+    shareModel.text = @"text";
+    shareModel.weiboText = @"weibo text";
+    shareModel.urlString = @"http://www.baidu.com";
+    shareModel.fromViewController = self;
+    shareModel.shareResultBlock = ^(PTShareType pplatform, PTShareResult result, NSError * error) {
+
+    };
+
+    
     [self addActionWithName:@"QQ Share" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] shareToPlateform:PTShareTypeQQ image:nil imageUrlString:@"" title:@"title" text:@"text" urlString:@"http://www.baidu.com" fromViewController:weakSelf shareResultBlock:^(PTShareType platform, PTShareResult shareResult, NSError *error) {
-            
-        }];
+        shareModel.platform = PTShareTypeQQ;
+        [[PTThirdPlatformConfigManager sharedInstance] shareWithModel:shareModel];
     }];
     
     [self addActionWithName:@"Wechat Share" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] shareToPlateform:PTShareTypeWechat image:nil imageUrlString:@"" title:@"title" text:@"text" urlString:@"http://www.baidu.com" fromViewController:weakSelf shareResultBlock:^(PTShareType platform, PTShareResult shareResult, NSError *error) {
-            
-        }];
+        shareModel.platform = PTShareTypeWechat;
+        [[PTThirdPlatformConfigManager sharedInstance] shareWithModel:shareModel];
     }];
     
     [self addActionWithName:@"Weibo Share" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] shareToPlateform:PTShareTypeWeibo image:nil imageUrlString:@"" title:@"title" text:@"text" urlString:@"http://www.baidu.com" fromViewController:weakSelf shareResultBlock:^(PTShareType platform, PTShareResult shareResult, NSError *error) {
-            
-        }];
+        shareModel.platform = PTShareTypeWeibo;
+        [[PTThirdPlatformConfigManager sharedInstance] shareWithModel:shareModel];
     }];
     
     [self addActionWithName:@"Wechat Pay" callback:^{
@@ -64,7 +80,9 @@ iOS第三方平台集成组件化
 ### 怎么配置
 #### SDK配置
 这部分可以参考各个平台的SDK配置，主要是配置KEY，APPID、infoplist、依赖库等信息，这里就不再一一例举了。  
-APPID、APPKEY配置放置在`PTThirdPlatformConfigConst.h`文件中统一管理
+APPID、APPKEY配置放置在`PTThirdPlatformConfigConst.h`文件中统一管理，`PTThirdPlatformConfigConst.h`文件在该项目中没有配置，需要自行配置，创建一个Header类型的文件，命名为`PTThirdPlatformConfigConst.h`即可，对应的KEY可以从`PTThirdPlatformConfigConstTemplate`文件中拷贝，Key对应的值配置为你申请的SDK的值即可。  
+![创建配置文件](https://gitee.com/uploads/images/2017/1101/122342_915156da_300384.png "创建配置文件.png")  
+
 
 #### 添加了新的第三方SDK
 添加了新的第三方SDK，在SDK配置这个步骤好了之后，需要做以下事情

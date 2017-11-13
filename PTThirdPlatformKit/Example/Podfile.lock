@@ -1,0 +1,41 @@
+PODS:
+  - PTFoundation (0.1.0)
+  - PTTestKit (0.1.0)
+  - PTThirdPlatformKit (0.1.0):
+    - PTFoundation
+    - SDWebImage
+    - WechatOpenSDK
+    - WeiboSDK
+    - YYModel
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - WechatOpenSDK (1.8.0)
+  - WeiboSDK (3.1.3)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - PTFoundation (from `../../PTFoundation`)
+  - PTTestKit (from `../../PTTestKit`)
+  - PTThirdPlatformKit (from `../`)
+
+EXTERNAL SOURCES:
+  PTFoundation:
+    :path: "../../PTFoundation"
+  PTTestKit:
+    :path: "../../PTTestKit"
+  PTThirdPlatformKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PTFoundation: 040e4efe8ebf431356a6a7b60e7cfccea87f3b7e
+  PTTestKit: cf49fc13b4f3b5adb47e62e09f3248302ffdfbe8
+  PTThirdPlatformKit: 6650fdc3477f4bc28c4aa2f1f165c88f84af1316
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
+  WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 21612f539fa360896bad6032a888842adbd79abb
+
+COCOAPODS: 1.2.1

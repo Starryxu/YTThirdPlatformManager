@@ -1,0 +1,14 @@
+#use_frameworks!
+platform :ios, '8.0'
+
+target 'PTThirdPlatformKit_Example' do
+  pod 'PTFoundation', :path => '../../PTFoundation'
+  pod 'PTThirdPlatformKit', :path => '../'
+  pod 'PTTestKit', :path => '../../PTTestKit'
+
+  target 'PTThirdPlatformKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

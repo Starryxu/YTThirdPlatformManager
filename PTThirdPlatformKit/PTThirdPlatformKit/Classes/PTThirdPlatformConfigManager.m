@@ -191,6 +191,7 @@ DEF_SINGLETON
              };
 }
 
+// 第三方平台的APPID/APPKEY/APPSECRET等信息
 - (NSMutableDictionary*)thirdPlatformKeysConfig {
     if (!_thirdPlatformKeysConfig) {
         _thirdPlatformKeysConfig = [[NSMutableDictionary alloc] init];

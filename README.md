@@ -1,8 +1,13 @@
 # YTThirdPlatformManager
 iOS第三方平台集成组件化(1.0.1 版本)
 
+
+ **历史版本**   
+
+[iOS第三方平台集成组件化(1.0.0 版本)](https://gitee.com/dhar/YTThirdPlatformManager/wikis/ytthirdplatformmanager-1.0.0-readme)
+
 ### 原理分析
-参考我的博客文章[iOS第三方平台集成组件化](https://my.oschina.net/u/1242477/blog/1557875) 和 [iOS第三方平台集成组件化续集](https://my.oschina.net/FEEDFACF/blog/1573080)  
+参考我的博客文章[iOS第三方平台集成组件化](https://my.oschina.net/u/1242477/blog/1557875) 和 [iOS第三方平台集成组件化续集](https://my.oschina.net/FEEDFACF/blog/1573080)   
 
 ### 怎么使用
 
@@ -257,3 +262,4 @@ APP调用第三方APP需要用到的，下面的配置文件配置了微信、�
 }
 ```
 完了之后可以回到`怎么使用`步骤查看怎么使用了。
+

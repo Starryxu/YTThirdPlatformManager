@@ -1,0 +1,16 @@
+PODS:
+  - PTFoundation (0.1.0)
+
+DEPENDENCIES:
+  - PTFoundation (from `../`)
+
+EXTERNAL SOURCES:
+  PTFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PTFoundation: 040e4efe8ebf431356a6a7b60e7cfccea87f3b7e
+
+PODFILE CHECKSUM: 911ae402ba92ac89091ec15ad10d75e0e0267b68
+
+COCOAPODS: 1.2.1

@@ -38,7 +38,7 @@ Sending stats
 Pod installation complete! There are 3 dependencies from the Podfile and 7 total pods installed.
 ```
 安装完成打开 `PTThirdPlatformKit.xcworkspace` 文件即可.  
-默认安装所有的平台，可以修改podfile配置一个或者多个平台 -> [选择需要的第三方平台](#Mark).
+默认安装所有的平台，可以修改podfile配置一个或者多个平台，具体可以查看 [选择需要的第三方平台](#Mark) 的介绍
 
 
 #### 示例代码

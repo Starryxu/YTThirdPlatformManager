@@ -11,8 +11,9 @@ iOS第三方平台集成组件化(1.0.1 版本)
 
 ### 怎么使用
 
-#### 配置
+#### 安装依赖库
 定位到Demo所在的Example目录  
+
 ![Demo所在的Example目录](https://gitee.com/uploads/images/2017/1114/084922_0f68d62d_300384.png "1.0.1-1运行podinstall.png")  
 
 运行 `pod install` 命令安装依赖库  
@@ -36,7 +37,8 @@ Integrating client project
 Sending stats
 Pod installation complete! There are 3 dependencies from the Podfile and 7 total pods installed.
 ```
-安装完成打开 `PTThirdPlatformKit.xcworkspace` 文件即可
+安装完成打开 `PTThirdPlatformKit.xcworkspace` 文件即可.  
+默认安装所有的平台，可以修改podfile配置一个或者多个平台，具体可以查看 [选择需要的第三方平台](#Mark) 的介绍
 
 
 #### 示例代码
@@ -217,6 +219,32 @@ APP调用第三方APP需要用到的，下面的配置文件配置了微信、�
 <string>weibosdk</string>
 <string>weibosdk2.5</string>
 </array>
+```
+  
+<div id="Mark"></div>
+#### 选择需要的第三方平台
+可以通过podfile配置不同的第三方平台，下面的配置是配置内置的所有的第三方平台：支付宝、QQ、微博、微信。可以选择其中的一个或多个配置，修改podfile之后需要运行`pod install`让配置生效。
+
+```ruby
+#use_frameworks!
+platform :ios, '8.0'
+
+target 'PTThirdPlatformKit_Example' do
+
+    pod 'PTTestKit', :path => '../../PTTestKit'
+
+    pod 'PTThirdPlatformKit', :path => '../'
+    pod 'PTThirdPlatformKit/AlipayManager', :path => '../'
+    pod 'PTThirdPlatformKit/TencentManager', :path => '../'
+    pod 'PTThirdPlatformKit/WeiboManager', :path => '../'
+    pod 'PTThirdPlatformKit/WXManager', :path => '../'
+
+  target 'PTThirdPlatformKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
 ```
 
 #### 扩展第三方SDK 

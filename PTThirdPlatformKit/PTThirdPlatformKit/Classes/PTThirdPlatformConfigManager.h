@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "PTAbsThirdPlatformManager.h"
 #import "PTThirdPlatformConfigurable.h"
-#import "UtilMacro.h"
 
 @interface PTThirdPlatformConfigManager : NSObject <PTAbsThirdPlatformManager, PTThirdPlatformConfigurable>
 

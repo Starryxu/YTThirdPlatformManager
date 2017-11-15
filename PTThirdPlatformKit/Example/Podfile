@@ -2,9 +2,14 @@
 platform :ios, '8.0'
 
 target 'PTThirdPlatformKit_Example' do
-  pod 'PTFoundation', :path => '../../PTFoundation'
-  pod 'PTThirdPlatformKit', :path => '../'
-  pod 'PTTestKit', :path => '../../PTTestKit'
+
+    pod 'PTTestKit', :path => '../../PTTestKit'
+
+    pod 'PTThirdPlatformKit', :path => '../'
+    pod 'PTThirdPlatformKit/AlipayManager', :path => '../'
+    pod 'PTThirdPlatformKit/TencentManager', :path => '../'
+    pod 'PTThirdPlatformKit/WeiboManager', :path => '../'
+    pod 'PTThirdPlatformKit/WXManager', :path => '../'
 
   target 'PTThirdPlatformKit_Tests' do
     inherit! :search_paths

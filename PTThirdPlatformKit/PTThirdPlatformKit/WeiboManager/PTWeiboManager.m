@@ -24,7 +24,7 @@ DEF_SINGLETON
     // 初始化微博模块
 #if DEBUG
     [WeiboSDK enableDebugMode:YES];
-    DBLog(@"WeiboSDK getSDKVersion = %@", [WeiboSDK getSDKVersion]);
+    NSLog(@"WeiboSDK getSDKVersion = %@", [WeiboSDK getSDKVersion]);
 #endif
     NSString* appKey = [[PTThirdPlatformConfigManager sharedInstance] appKeyWithPlaform:PTThirdPlatformTypeWeibo];
     [WeiboSDK registerApp:appKey];

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "PTThirdPlatformDefine.h"
 
-
 @class ThirdPlatformUserInfo;
 
 // RespManagerDelegate

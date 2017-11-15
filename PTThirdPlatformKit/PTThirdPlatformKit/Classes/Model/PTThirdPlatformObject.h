@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "PTThirdPlatformDefine.h"
-#import <YYModel/YYModel.h>
 
 #pragma mark - ......::::::: ThirdPlatformUserInfo :::::::......
 
@@ -24,18 +23,15 @@
 @property (nonatomic, strong) NSDate* expirationDate;
 @property (nonatomic, strong) NSString* tokenString;
 
-+ (ThirdPlatformUserInfo *)userbyTranslateSinaResult:(id)result;
-+ (ThirdPlatformUserInfo *)userbyTranslateTencentResult:(id)result;
-
 @end
 
 
-@interface PTSharedObject : NSObject <YYModel>
+@interface PTSharedObject : NSObject
 @property (nonatomic, assign) PTShareContentType contentType;
 @end
 
 
-@interface PTSharedVideoObject : PTSharedObject <YYModel>
+@interface PTSharedVideoObject : PTSharedObject
 /**
  视频网页的url
  @warning 不能为空且长度不能超过255
@@ -50,7 +46,7 @@
 @end
 
 
-@interface PTSharedWebPageObject : PTSharedObject <YYModel>
+@interface PTSharedWebPageObject : PTSharedObject
 /**
  网页的url地址
  
@@ -60,7 +56,7 @@
 @end
 
 
-@interface ThirdPlatformShareModel : NSObject <YYModel>
+@interface ThirdPlatformShareModel : NSObject
 @property (nonatomic, assign) PTShareType platform;
 @property (nonatomic, strong) PTSharedObject* mediaObject;
 @property (nonatomic, strong) UIImage* image;
@@ -74,15 +70,14 @@
 @end
 
 
-@interface ThirdPlatformLoginModel : NSObject <YYModel>
-AS_ItemsWithArray
+@interface ThirdPlatformLoginModel : NSObject
 @property (nonatomic, assign) PTThirdPlatformType thirdPlatformType;
 @property (nonatomic, copy) NSString* icon;
 @property (nonatomic, copy) NSString* name;
 @end
 
 
-@interface OrderModel : NSObject <YYModel>
+@interface OrderModel : NSObject
 /** 商家向财付通申请的商家id */
 @property (nonatomic, retain) NSString *partnerid;
 /** 预支付订单 */

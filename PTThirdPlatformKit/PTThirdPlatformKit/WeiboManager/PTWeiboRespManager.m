@@ -8,6 +8,7 @@
 
 #import "PTWeiboRespManager.h"
 #import "PTThirdPlatformObject.h"
+#import <WeiboSDK/WeiboUser.h>
 
 @implementation PTWeiboRespManager
 
@@ -38,7 +39,7 @@ DEF_SINGLETON
                 [self.delegate respManagerDidRecvAuthResponse:nil platform:PTThirdPlatformTypeWeibo];
             }
         }else{
-            ThirdPlatformUserInfo *user = [ThirdPlatformUserInfo userbyTranslateSinaResult:result];
+            ThirdPlatformUserInfo *user = [self.class userbyTranslateSinaResult:result];
             user.userId = userId;
             user.tokenString = accessToken;
             
@@ -47,6 +48,19 @@ DEF_SINGLETON
             }
         }
     }];
+}
+
++ (ThirdPlatformUserInfo *)userbyTranslateSinaResult:(id)result {
+    ThirdPlatformUserInfo *user = [[ThirdPlatformUserInfo alloc] init];
+    user.thirdPlatformType = PTThirdPlatformTypeWeibo;
+    
+    if ([result isKindOfClass:[WeiboUser class]]) {
+        WeiboUser *wbUser = (WeiboUser *)result;
+        user.username = wbUser.screenName;
+        user.gender = wbUser.gender;
+        user.head = wbUser.avatarLargeUrl;
+    }
+    return user;
 }
 
 @end

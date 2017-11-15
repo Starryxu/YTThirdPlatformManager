@@ -38,7 +38,7 @@ DEF_SINGLETON
  * 登录成功后的回调
  */
 - (void)tencentDidLogin {
-    DBLog(@"===");
+    NSLog(@"===");
     [self.tencentOAuth getUserInfo];
 }
 
@@ -47,7 +47,7 @@ DEF_SINGLETON
  * \param cancelled 代表用户是否主动退出登录
  */
 - (void)tencentDidNotLogin:(BOOL)cancelled {
-    DBLog(@"===");
+    NSLog(@"===");
     if ([self.delegate respondsToSelector:@selector(respManagerDidRecvAuthResponse:platform:)]) {
         [self.delegate respManagerDidRecvAuthResponse:nil platform:PTThirdPlatformTypeTencentQQ];
     }
@@ -57,7 +57,7 @@ DEF_SINGLETON
  * 登录时网络有问题的回调
  */
 - (void)tencentDidNotNetWork {
-    DBLog(@"===");
+    NSLog(@"===");
     if ([self.delegate respondsToSelector:@selector(respManagerDidRecvAuthResponse:platform:)]) {
         [self.delegate respManagerDidRecvAuthResponse:nil platform:PTThirdPlatformTypeTencentQQ];
     }
@@ -73,10 +73,10 @@ DEF_SINGLETON
  *          错误返回示例: \snippet example/getUserInfoResponse.exp fail
  */
 - (void)getUserInfoResponse:(APIResponse*) response {
-    DBLog(@"===");
+    NSLog(@"===");
     if (URLREQUEST_SUCCEED == response.retCode
         && kOpenSDKErrorSuccess == response.detailRetCode) {
-        ThirdPlatformUserInfo *user = [ThirdPlatformUserInfo userbyTranslateTencentResult:response.jsonResponse];
+        ThirdPlatformUserInfo *user = [self.class userbyTranslateTencentResult:response.jsonResponse];
         user.userId = self.tencentOAuth.openId;
         user.tokenString = self.tencentOAuth.accessToken;
         if ([self.delegate respondsToSelector:@selector(respManagerDidRecvAuthResponse:platform:)]) {
@@ -89,13 +89,31 @@ DEF_SINGLETON
     }
 }
 
++ (ThirdPlatformUserInfo *)userbyTranslateTencentResult:(id)result {
+    ThirdPlatformUserInfo *user = [[ThirdPlatformUserInfo alloc] init];
+    user.thirdPlatformType = PTThirdPlatformTypeTencentQQ;
+    
+    if ([result isKindOfClass:[NSDictionary class]]) {
+        user.gender = [result objectForKey:@"gender"];
+        user.username = [result objectForKey:@"nickname"];
+        user.head = [result objectForKey:@"figureurl_qq_2"];
+        NSString *year = [result objectForKeyedSubscript:@"year"];
+        NSDateFormatter *dateFoematter = [[NSDateFormatter alloc] init];
+        [dateFoematter setDateFormat:@"yyyy"];
+        NSString *currDate = [dateFoematter stringFromDate:[NSDate date]];
+        int ageNum = [currDate intValue] - [year intValue];
+        user.age = [NSString stringWithFormat:@"%d",ageNum];
+    }
+    return user;
+}
+
 /**
  * 社交API统一回调接口
  * \param response API返回结果，具体定义参见sdkdef.h文件中\ref APIResponse
  * \param message 响应的消息，目前支持‘SendStory’,‘AppInvitation’，‘AppChallenge’，‘AppGiftRequest’
  */
 - (void)responseDidReceived:(APIResponse*)response forMessage:(NSString *)message {
-    DBLog(@"===");
+    NSLog(@"===");
 }
 
 
@@ -103,14 +121,14 @@ DEF_SINGLETON
  处理来至QQ的请求
  */
 - (void)onReq:(QQBaseReq *)req {
-    DBLog(@"===");
+    NSLog(@"===");
 }
 
 /**
  处理来至QQ的响应
  */
 - (void)onResp:(QQBaseResp *)resp {
-    DBLog(@"===");
+    NSLog(@"===");
     if ([resp isKindOfClass:[SendMessageToQQResp class]]) {
         if ([self.delegate respondsToSelector:@selector(respManagerDidRecvMessageResponse:platform:)]) {
             if ([resp.result isEqualToString:@"0"]) {
@@ -126,7 +144,7 @@ DEF_SINGLETON
  处理QQ在线状态的回调
  */
 - (void)isOnlineResponse:(NSDictionary *)response {
-    DBLog(@"===");
+    NSLog(@"===");
 }
 
 @end

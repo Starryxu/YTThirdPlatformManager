@@ -28,37 +28,56 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/flypigrmvb/PTThirdPlatformKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '8.0'
+    s.default_subspec = 'Core'
 
-  s.source_files = 'PTThirdPlatformKit/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PTThirdPlatformKit' => ['PTThirdPlatformKit/Assets/*.png']
-  # }
+    s.subspec 'Core' do |subspec|
+        # 源代码
+        subspec.source_files = 'PTThirdPlatformKit/Classes/**/*'
+        # 配置系统Framework
+        subspec.frameworks = 'CoreMotion'
+        subspec.dependency 'SDWebImage'
+        # 添加依赖的系统静态库
+        subspec.libraries = 'xml2', 'z', 'c++', 'stdc++.6', 'sqlite3'
+    end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
 
-    # 配置Prefix Header
-    s.prefix_header_contents = '#import <PTFoundation/UtilMacro.h>', '#import <PTFoundation/DebugConfig.h>'
+    s.subspec 'AlipayManager' do |subspec|
+        # 源代码
+        subspec.source_files = 'PTThirdPlatformKit/AlipayManager/**/*'
+        # 添加资源文件
+        subspec.resource = 'PTThirdPlatformKit/AlipayManager/**/*.bundle'
+        # 添加依赖的framework
+        subspec.vendored_frameworks = 'PTThirdPlatformKit/AlipayManager/**/*.framework'
+        subspec.frameworks = 'CoreTelephony', 'SystemConfiguration'
+        subspec.dependency 'PTThirdPlatformKit/Core'
+    end
 
-    # 配置系统Framework
-    s.frameworks = 'CoreMotion'
 
-    # 添加资源文件
-    s.resource = 'PTThirdPlatformKit/Frameworks/**/*.bundle'
+    s.subspec 'TencentManager' do |subspec|
+        # 源代码
+        subspec.source_files = 'PTThirdPlatformKit/TencentManager/**/*'
+        # 添加资源文件
+        subspec.resource = 'PTThirdPlatformKit/TencentManager/**/*.bundle'
+        # 添加依赖的framework
+        subspec.vendored_frameworks = 'PTThirdPlatformKit/TencentManager/**/*.framework'
+        subspec.frameworks = 'SystemConfiguration'
+        subspec.dependency 'PTThirdPlatformKit/Core'
+    end
 
-    # 添加依赖的framework
-    s.vendored_frameworks = 'PTThirdPlatformKit/Frameworks/**/*.framework'
 
-    # 添加依赖的Pod库
-    s.dependency 'WeiboSDK'
-    s.dependency 'WechatOpenSDK'
-    s.dependency 'PTFoundation'
-    s.dependency 'YYModel'
-    s.dependency 'SDWebImage'
+    s.subspec 'WeiboManager' do |subspec|
+        # 源代码
+        subspec.source_files = 'PTThirdPlatformKit/WeiboManager/**/*'
+        subspec.dependency 'WeiboSDK'
+        subspec.dependency 'PTThirdPlatformKit/Core'
+    end
 
-    # 添加依赖的系统静态库
-    s.libraries = 'xml2', 'z', 'c++', 'stdc++.6', 'sqlite3'
-
+    s.subspec 'WXManager' do |subspec|
+        # 源代码
+        subspec.source_files = 'PTThirdPlatformKit/WXManager/**/*'
+        subspec.dependency 'WechatOpenSDK'
+        subspec.dependency 'PTThirdPlatformKit/Core'
+    end
 
 end

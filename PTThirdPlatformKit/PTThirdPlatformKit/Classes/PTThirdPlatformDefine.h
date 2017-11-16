@@ -27,7 +27,7 @@ return __singleton__; \
 #define ValueOrEmpty(value)     ((value)?(value):@"")
 
 // 线程处理相关
-static inline void PTOnMainThreadAsync(void (^block)(void)) {
+static inline void PTThirdPlatformOnMainThreadAsync(void (^block)(void)) {
     if ([NSThread isMainThread]) block();
     else dispatch_async(dispatch_get_main_queue(), block);
 }

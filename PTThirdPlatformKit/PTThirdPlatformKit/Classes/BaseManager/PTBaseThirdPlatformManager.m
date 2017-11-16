@@ -82,13 +82,13 @@
 #pragma mark - ......::::::: PTAbsThirdPlatformRespManagerDelegate :::::::......
 
 - (void)respManagerDidRecvAuthResponse:(ThirdPlatformUserInfo *)response platform:(PTThirdPlatformType)platform {
-    PTOnMainThreadAsync(^{
+    PTThirdPlatformOnMainThreadAsync(^{
         !_callback ?: _callback(response, nil);
     });
 }
 
 - (void)respManagerDidRecvMessageResponse:(BOOL)result platform:(PTShareType)platform {
-    PTOnMainThreadAsync(^{
+    PTThirdPlatformOnMainThreadAsync(^{
         if (result) {
             !self.shareResultBlock ?: self.shareResultBlock(platform, PTShareResultSuccess, nil);
         } else {
@@ -98,7 +98,7 @@
 }
 
 - (void)respManagerDidRecvPayResponse:(BOOL)result platform:(PTThirdPlatformType)platform {
-    PTOnMainThreadAsync(^{
+    PTThirdPlatformOnMainThreadAsync(^{
         !self.paymentBlock ?: self.paymentBlock(result);
     });
 }

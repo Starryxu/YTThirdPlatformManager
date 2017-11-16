@@ -9,7 +9,7 @@
 #import "PTWXRequestHandler.h"
 #import <WXApi.h>
 #import "PTWXRespManager.h"
-#import "UIImage+Util.h"
+#import "UIImage+PTUtil.h"
 #import "PTThirdPlatformObject.h"
 
 static NSString *kAuthScope = @"snsapi_userinfo";

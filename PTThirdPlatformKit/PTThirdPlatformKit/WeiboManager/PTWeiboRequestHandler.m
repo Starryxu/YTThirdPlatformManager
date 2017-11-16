@@ -8,9 +8,9 @@
 
 #import "PTWeiboRequestHandler.h"
 #import <WeiboSDK/WeiboSDK.h>
-#import "UIImage+Util.h"
 #import "PTThirdPlatformConfigManager.h"
 #import "PTThirdPlatformObject.h"
+#import "UIImage+PTUtil.h"
 
 @implementation PTWeiboRequestHandler
 

@@ -8,7 +8,7 @@
 
 #import "PTWXRespManager.h"
 #import "WXApi.h"
-#import "NSData+NSJSON.h"
+#import "NSData+PTJsonConvert.h"
 #import "PTThirdPlatformConfigManager.h"
 #import "NetworkRequestUtil.h"
 #import "PTThirdPlatformObject.h"
@@ -65,7 +65,7 @@ DEF_SINGLETON
         userInfo.username = [resultDict objectForKey:@"nickname"];
         userInfo.head = [resultDict objectForKey:@"headimgurl"];
         userInfo.tokenString = accessToken;
-        PTOnMainThreadAsync(^{
+        PTThirdPlatformOnMainThreadAsync(^{
             if (self.delegate
                 && [self.delegate respondsToSelector:@selector(respManagerDidRecvAuthResponse:platform:)]) {
                 [self.delegate respManagerDidRecvAuthResponse:userInfo platform:PTThirdPlatformTypeWechat];

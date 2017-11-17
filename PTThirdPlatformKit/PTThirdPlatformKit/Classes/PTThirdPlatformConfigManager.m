@@ -118,11 +118,11 @@ DEF_SINGLETON
          appSecret:(NSString *)appSecret
        redirectURL:(NSString *)redirectURL {
     [self.thirdPlatformKeysConfig
-     setObject:@(platformType)
-     forKey:@{@(PTThirdPlatformAppID): ValueOrEmpty(appID),
-              @(PTThirdPlatformAppKey): ValueOrEmpty(appKey),
-              @(PTThirdPlatformAppSecret): ValueOrEmpty(appSecret),
-              @(PTThirdPlatformRedirectURI): ValueOrEmpty(redirectURL)}];
+     setObject:@{@(PTThirdPlatformAppID): ValueOrEmpty(appID),
+                 @(PTThirdPlatformAppKey): ValueOrEmpty(appKey),
+                 @(PTThirdPlatformAppSecret): ValueOrEmpty(appSecret),
+                 @(PTThirdPlatformRedirectURI): ValueOrEmpty(redirectURL)}
+     forKey:@(platformType)];
     return YES;
 }
 

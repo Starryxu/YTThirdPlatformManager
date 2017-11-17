@@ -24,7 +24,7 @@ DEF_SINGLETON
 - (void)thirdPlatConfigWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 子类实现
     //向微信注册
-    NSString* appID = [[PTThirdPlatformConfigManager sharedInstance] appKeyWithPlaform:PTThirdPlatformTypeWechat];
+    NSString* appID = [[PTThirdPlatformConfigManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWechat];
     [WXApi registerApp:appID];
 }
 

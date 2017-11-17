@@ -41,9 +41,9 @@ Pod installation complete! There are 3 dependencies from the Podfile and 7 total
 默认安装所有的平台，可以修改podfile配置一个或者多个平台，具体可以查看 [选择需要的第三方平台](#Mark) 的介绍
 
 
-#### 示例代码
+#### 第三方平台配置
 
-第三方平台配置,在AppDelegate的`didFinishLaunchingWithOptions`方法中进行平台的配置
+1、在AppDelegate的`didFinishLaunchingWithOptions`方法中进行平台的配置
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -59,7 +59,15 @@ Pod installation complete! There are 3 dependencies from the Podfile and 7 total
 }
 ```
 
-功能调用  
+2、在AppDelegate的`openURL`方法中配置URL回调
+
+```objc
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[PTThirdPlatformConfigManager sharedInstance] thirdPlatCanOpenUrlWithApplication:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+```
+
+3、功能调用  
 下面是不同平台调用第三发SDK的登录、分享、支付的功能示例代码，具体的可以下载项目代码查看。
 ```objc    
 - (void)viewDidLoad {
@@ -128,7 +136,6 @@ Pod installation complete! There are 3 dependencies from the Podfile and 7 total
     }];
 ```
 
-### 怎么配置
 #### SDK配置
 项目已经添加了微信、微博、QQ的第三方SDK了，支付宝和QQ是使用framework包的方式导入，微信和微博使用Pod的方式导入，运行 `pod install` 即可导入微信和微博的SDK。这些平台的依赖库已经配置好了，所以不需要再次配置即可使用。
 
@@ -182,7 +189,7 @@ Pod installation complete! There are 3 dependencies from the Podfile and 7 total
 </array>
 ```
 
-#### QueriesSchemes  
+#### QueriesSchemes配置  
 APP调用第三方APP需要用到的，下面的配置文件配置了微信、微博、QQ、支付宝这几个第三方APP的调用，其中微信的配置需要填写你的微信APPID，如需要更多的其他第三方APP调用，参考第三方平台的配置添加即可。
 ```ruby
 <key>LSApplicationQueriesSchemes</key>

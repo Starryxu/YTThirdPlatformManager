@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D37D0CB061ADE27C66A498A /* libPods-PTThirdPlatformKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D52ED791870C86211EFDBA9 /* libPods-PTThirdPlatformKit_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		8AC1A38A21D309F2E4E4D76F /* libPods-PTThirdPlatformKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D52ED791870C86211EFDBA9 /* libPods-PTThirdPlatformKit_Example.a */; };
 		9C9B1FB31FC18EC4002412D9 /* PTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* PTAppDelegate.m */; };
 		9C9B1FB41FC18EC4002412D9 /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PTViewController.m */; };
 		9C9B1FB51FC18EC4002412D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
@@ -34,6 +34,8 @@
 		9C9B1FBE1FC18EC4002412D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		9C9B1FBF1FC18EC4002412D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		9C9B1FC91FC190C6002412D9 /* PTThirdPlatformKit_Developer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9B1FC81FC190C6002412D9 /* PTThirdPlatformKit_Developer-Info.plist */; };
+		AC334C9EC03E84F6B0A6E390 /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CD4A2E86D0BE63AFAF942E /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a */; };
+		AD353EFB52B89F511B4C929B /* libPods-PTThirdPlatformKit_Example_Developer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831EB09DF8B71ACFF4BC0FFD /* libPods-PTThirdPlatformKit_Example_Developer.a */; };
 		CE71961F2A0B8CA2DAA6D14F /* libPods-PTThirdPlatformKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F45B4F44DE988F8C1137B1AC /* libPods-PTThirdPlatformKit_Tests.a */; };
 		E59DC665DC58AD9A8AF66558 /* libPods-PTThirdPlatformKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D52ED791870C86211EFDBA9 /* libPods-PTThirdPlatformKit_Example.a */; };
 /* End PBXBuildFile section */
@@ -49,8 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6D121BFA0894831C818AB5 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig"; sourceTree = "<group>"; };
 		362A95AAFAC769612971361C /* Pods-PTThirdPlatformKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		530819498C6626093A40696D /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PTThirdPlatformKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTThirdPlatformKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,14 +76,20 @@
 		6D52ED791870C86211EFDBA9 /* libPods-PTThirdPlatformKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		768CE9CE532EB4C65EB62F86 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		76D19AB998D44E7997B655EC /* Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; sourceTree = "<group>"; };
+		831EB09DF8B71ACFF4BC0FFD /* libPods-PTThirdPlatformKit_Example_Developer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Example_Developer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E836E86F8839C9BFD3F363 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87CD4A2E86D0BE63AFAF942E /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A42F65DDA97468473D692C3 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; sourceTree = "<group>"; };
+		9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9C7285FF1FB9A7FC008D27A5 /* PTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTConstants.h; sourceTree = "<group>"; };
 		9C9B1FC51FC18EC4002412D9 /* PTThirdPlatformKit_Example_Developer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTThirdPlatformKit_Example_Developer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9B1FC71FC19039002412D9 /* PTConstants_Developer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTConstants_Developer.h; sourceTree = "<group>"; };
 		9C9B1FC81FC190C6002412D9 /* PTThirdPlatformKit_Developer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PTThirdPlatformKit_Developer-Info.plist"; sourceTree = "<group>"; };
 		A2225269EBD771EB9234EAF8 /* Pods-PTThirdPlatformKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E4C0337140224E34E4ACBF6C /* Pods-PTThirdPlatformKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CDF5EC14B3EB27858D9818D4 /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EEADE74070FD2397E6B0FEC8 /* Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig"; sourceTree = "<group>"; };
 		F45B4F44DE988F8C1137B1AC /* libPods-PTThirdPlatformKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,7 +102,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				E59DC665DC58AD9A8AF66558 /* libPods-PTThirdPlatformKit_Example.a in Frameworks */,
-				8AC1A38A21D309F2E4E4D76F /* libPods-PTThirdPlatformKit_Example.a in Frameworks */,
+				0D37D0CB061ADE27C66A498A /* libPods-PTThirdPlatformKit_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +124,8 @@
 				9C9B1FB71FC18EC4002412D9 /* CoreGraphics.framework in Frameworks */,
 				9C9B1FB81FC18EC4002412D9 /* UIKit.framework in Frameworks */,
 				9C9B1FB91FC18EC4002412D9 /* Foundation.framework in Frameworks */,
+				AD353EFB52B89F511B4C929B /* libPods-PTThirdPlatformKit_Example_Developer.a in Frameworks */,
+				AC334C9EC03E84F6B0A6E390 /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +137,12 @@
 			children = (
 				A2225269EBD771EB9234EAF8 /* Pods-PTThirdPlatformKit_Tests.debug.xcconfig */,
 				362A95AAFAC769612971361C /* Pods-PTThirdPlatformKit_Tests.release.xcconfig */,
-				530819498C6626093A40696D /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */,
-				E4C0337140224E34E4ACBF6C /* Pods-PTThirdPlatformKit_Example.release.xcconfig */,
+				CDF5EC14B3EB27858D9818D4 /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */,
+				9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */,
+				76D19AB998D44E7997B655EC /* Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig */,
+				EEADE74070FD2397E6B0FEC8 /* Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig */,
+				9A42F65DDA97468473D692C3 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig */,
+				0D6D121BFA0894831C818AB5 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -164,6 +178,8 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				6D52ED791870C86211EFDBA9 /* libPods-PTThirdPlatformKit_Example.a */,
 				F45B4F44DE988F8C1137B1AC /* libPods-PTThirdPlatformKit_Tests.a */,
+				831EB09DF8B71ACFF4BC0FFD /* libPods-PTThirdPlatformKit_Example_Developer.a */,
+				87CD4A2E86D0BE63AFAF942E /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,7 +187,6 @@
 		6003F593195388D20070C39A /* Example for PTThirdPlatformKit */ = {
 			isa = PBXGroup;
 			children = (
-				9C5E24EB1FC294A80009BC14 /* CustomInjectPlatform */,
 				9C9B1FC71FC19039002412D9 /* PTConstants_Developer.h */,
 				9C7285FF1FB9A7FC008D27A5 /* PTConstants.h */,
 				6003F59C195388D20070C39A /* PTAppDelegate.h */,
@@ -228,13 +243,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9C5E24EB1FC294A80009BC14 /* CustomInjectPlatform */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomInjectPlatform;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,9 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C9B1FC21FC18EC4002412D9 /* Build configuration list for PBXNativeTarget "PTThirdPlatformKit_Example_Developer" */;
 			buildPhases = (
+				A3047EC052A17A09549A5A5A /* [CP] Check Pods Manifest.lock */,
 				9C9B1FB21FC18EC4002412D9 /* Sources */,
 				9C9B1FB61FC18EC4002412D9 /* Frameworks */,
 				9C9B1FBB1FC18EC4002412D9 /* Resources */,
+				C16CA16E5DA96E49C5432A15 /* [CP] Embed Pods Frameworks */,
+				C714E6DC13D6E6D76571B8AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,7 +392,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D1D533FD3332DABB3C93DA2 /* [CP] Copy Pods Resources */ = {
@@ -418,6 +429,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A3047EC052A17A09549A5A5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B686730ACC9009BF50DBFE64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,7 +462,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16CA16E5DA96E49C5432A15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C714E6DC13D6E6D76571B8AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer-resources.sh",
+				"${PODS_ROOT}/../../PTThirdPlatformKit/AlipayManager/Frameworks/AlipaySDK/AlipaySDK.bundle",
+				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC2D25066A07765CA769CD42 /* [CP] Embed Pods Frameworks */ = {
@@ -610,7 +673,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 530819498C6626093A40696D /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */;
+			baseConfigurationReference = CDF5EC14B3EB27858D9818D4 /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -625,7 +688,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4C0337140224E34E4ACBF6C /* Pods-PTThirdPlatformKit_Example.release.xcconfig */;
+			baseConfigurationReference = 9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -684,6 +747,7 @@
 		};
 		9C9B1FC31FC18EC4002412D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A42F65DDA97468473D692C3 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -704,6 +768,7 @@
 		};
 		9C9B1FC41FC18EC4002412D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6D121BFA0894831C818AB5 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

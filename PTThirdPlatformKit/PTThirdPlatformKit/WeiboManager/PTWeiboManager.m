@@ -9,7 +9,7 @@
 #import "PTWeiboManager.h"
 #import "PTWeiboRespManager.h"
 #import "PTWeiboRequestHandler.h"
-#import "PTThirdPlatformConfigManager.h"
+#import "PTThirdPlatformManager.h"
 #import "PTThirdPlatformObject.h"
 
 @interface PTWeiboManager () <PTAbsThirdPlatformRespManagerDelegate>
@@ -26,7 +26,7 @@ DEF_SINGLETON
     [WeiboSDK enableDebugMode:YES];
     NSLog(@"WeiboSDK getSDKVersion = %@", [WeiboSDK getSDKVersion]);
 #endif
-    NSString* appKey = [[PTThirdPlatformConfigManager sharedInstance] appKeyWithPlaform:PTThirdPlatformTypeWeibo];
+    NSString* appKey = [[PTThirdPlatformManager sharedInstance] appKeyWithPlaform:PTThirdPlatformTypeWeibo];
     [WeiboSDK registerApp:appKey];
 }
 

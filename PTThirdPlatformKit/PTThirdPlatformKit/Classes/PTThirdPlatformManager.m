@@ -1,12 +1,12 @@
 //
-//  PTThirdPlatformConfigManager.m
+//  PTThirdPlatformManager.m
 //  Plush
 //
 //  Created by aron on 2017/10/26.
 //  Copyright © 2017年 qingot. All rights reserved.
 //
 
-#import "PTThirdPlatformConfigManager.h"
+#import "PTThirdPlatformManager.h"
 #import "PTAbsThirdPlatformManager.h"
 #import "PTThirdPlatformObject.h"
 
@@ -18,11 +18,11 @@ typedef NS_ENUM(NSUInteger, PTThirdPlatformConfigKey) {
 };
 
 
-@interface PTThirdPlatformConfigManager ()
+@interface PTThirdPlatformManager ()
 @property (nonatomic, strong) NSMutableDictionary* thirdPlatformKeysConfig;
 @end
 
-@implementation PTThirdPlatformConfigManager
+@implementation PTThirdPlatformManager
 
 DEF_SINGLETON
 

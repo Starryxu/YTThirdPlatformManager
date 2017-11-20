@@ -21,5 +21,11 @@ static NSString *kWeiboAppID = @" ";
 static NSString *kWeiboAppKey = @" ";
 static NSString *kWeiboAppSecret = @" ";
 static NSString *kWeiboRedirectURI = @"https://api.weibo.com/oauth2/default.html";
+static NSString *kDingTalkAppID = @"dingoak5hqhuvmpfhpnjvt";
+
+
+typedef enum : NSUInteger {
+    PTCustumShareTypeDingTalk,
+} PTCustumShareType;
 
 #endif /* PTConstants_h */

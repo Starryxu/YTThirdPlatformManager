@@ -31,4 +31,21 @@
 - (NSString*)appSecretWithPlaform:(PTThirdPlatformType)platformType;
 - (NSString*)appRedirectURLWithPlaform:(PTThirdPlatformType)platformType;
 
+
+/**
+ 插件接入点-添加登录或者是支付的管理类
+
+ @param platformType 自定义的第三方平台类型，大于999
+ @param managerClass 实现了PTAbsThirdPlatformManager接口的自定义第三方平台管理类
+ */
+- (void)addCustomPlatform:(NSInteger)platformType managerClass:(Class)managerClass;
+
+/**
+ 插件接入点-添加分享的管理类
+
+ @param sharePlatformType 自定义的第三方平台分享类型，大于999
+ @param managerClass 实现了PTAbsThirdPlatformManager接口的自定义第三方平台管理类
+ */
+- (void)addCustomSharePlatform:(NSInteger)sharePlatformType managerClass:(Class)managerClass;
+
 @end

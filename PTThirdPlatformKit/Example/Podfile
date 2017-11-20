@@ -10,21 +10,16 @@ target 'PTThirdPlatformKit_Example' do
     pod 'PTThirdPlatformKit/TencentManager', :path => '../'
     pod 'PTThirdPlatformKit/WeiboManager', :path => '../'
     pod 'PTThirdPlatformKit/WXManager', :path => '../'
-
-  target 'PTThirdPlatformKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
   
-  target 'PTThirdPlatformKit_Example_Developer' do      
-      pod 'PTTestKit', :path => '../../PTTestKit'
-      
-      pod 'PTThirdPlatformKit', :path => '../'
-      pod 'PTThirdPlatformKit/AlipayManager', :path => '../'
-      pod 'PTThirdPlatformKit/TencentManager', :path => '../'
-      pod 'PTThirdPlatformKit/WeiboManager', :path => '../'
-      pod 'PTThirdPlatformKit/WXManager', :path => '../'
-      
-  end
+end
+
+target 'PTThirdPlatformKit_Example_Developer' do
+    pod 'PTTestKit', :path => '../../PTTestKit'
+    
+    pod 'PTThirdPlatformKit', :path => '../'
+    pod 'PTThirdPlatformKit/AlipayManager', :path => '../'
+    pod 'PTThirdPlatformKit/TencentManager', :path => '../'
+    pod 'PTThirdPlatformKit/WeiboManager', :path => '../'
+    pod 'PTThirdPlatformKit/WXManager', :path => '../'
+    
 end

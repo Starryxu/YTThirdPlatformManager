@@ -8,20 +8,16 @@
 
 #import "PTAppDelegate.h"
 #import <PTThirdPlatformKit/PTThirdPlatformKit.h>
-
-#define DeveloperMode   PT_DEVELOPER
-
-#if DeveloperMode
-#import "PTConstants_Developer.h"
-#else
-#import "PTConstants.h"
-#endif
-
+#import "PTDingTalkManager.h"
 
 @implementation PTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // 自定义的第三方平台以插件的方式添加
+    [[PTThirdPlatformManager sharedInstance] addCustomSharePlatform:PTCustumShareTypeDingTalk managerClass:PTDingTalkManager.class];
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTCustumShareTypeDingTalk appID:kDingTalkAppID appKey:nil appSecret:nil redirectURL:nil];
+    
     // 第三方平台注册
     [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeWechat appID:kWXAppID appKey:nil appSecret:kWXAppSecret redirectURL:nil];
     [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeTencentQQ appID:kTencentAppID appKey:kTencentAppKey appSecret:kTencentAppSecret redirectURL:nil];

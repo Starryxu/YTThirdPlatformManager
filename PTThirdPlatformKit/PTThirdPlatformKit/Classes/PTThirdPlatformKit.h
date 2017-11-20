@@ -11,6 +11,7 @@
 
 #import "PTThirdPlatformManager.h"
 #import "PTThirdPlatformDefine.h"
+#import "PTThirdPlatformObject.h"
 #import "PTAbsThirdPlatformManager.h"
 #import "PTAbsThirdPlatformRequestHandler.h"
 #import "PTAbsThirdPlatformRespManager.h"

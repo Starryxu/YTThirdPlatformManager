@@ -23,6 +23,14 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		9C5E24EF1FC295EE0009BC14 /* DTShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5E24EE1FC295EE0009BC14 /* DTShareKit.framework */; };
+		9C5E24F21FC2960B0009BC14 /* PTDingTalkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F11FC2960B0009BC14 /* PTDingTalkManager.m */; };
+		9C5E24F51FC2963C0009BC14 /* PTDingTalkRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F41FC2963C0009BC14 /* PTDingTalkRequestHandler.m */; };
+		9C5E24F81FC296590009BC14 /* PTDingTalkRespManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F71FC296590009BC14 /* PTDingTalkRespManager.m */; };
+		9C5E24F91FC2965D0009BC14 /* PTDingTalkRespManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F71FC296590009BC14 /* PTDingTalkRespManager.m */; };
+		9C5E24FA1FC2965F0009BC14 /* PTDingTalkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F11FC2960B0009BC14 /* PTDingTalkManager.m */; };
+		9C5E24FB1FC296610009BC14 /* PTDingTalkRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F41FC2963C0009BC14 /* PTDingTalkRequestHandler.m */; };
+		9C5E259C1FC302390009BC14 /* DTShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5E24EE1FC295EE0009BC14 /* DTShareKit.framework */; };
 		9C9B1FB31FC18EC4002412D9 /* PTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* PTAppDelegate.m */; };
 		9C9B1FB41FC18EC4002412D9 /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PTViewController.m */; };
 		9C9B1FB51FC18EC4002412D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
@@ -36,7 +44,6 @@
 		9C9B1FC91FC190C6002412D9 /* PTThirdPlatformKit_Developer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C9B1FC81FC190C6002412D9 /* PTThirdPlatformKit_Developer-Info.plist */; };
 		AC334C9EC03E84F6B0A6E390 /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CD4A2E86D0BE63AFAF942E /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a */; };
 		AD353EFB52B89F511B4C929B /* libPods-PTThirdPlatformKit_Example_Developer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831EB09DF8B71ACFF4BC0FFD /* libPods-PTThirdPlatformKit_Example_Developer.a */; };
-		CE71961F2A0B8CA2DAA6D14F /* libPods-PTThirdPlatformKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F45B4F44DE988F8C1137B1AC /* libPods-PTThirdPlatformKit_Tests.a */; };
 		E59DC665DC58AD9A8AF66558 /* libPods-PTThirdPlatformKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D52ED791870C86211EFDBA9 /* libPods-PTThirdPlatformKit_Example.a */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +59,6 @@
 
 /* Begin PBXFileReference section */
 		0D6D121BFA0894831C818AB5 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig"; sourceTree = "<group>"; };
-		362A95AAFAC769612971361C /* Pods-PTThirdPlatformKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PTThirdPlatformKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTThirdPlatformKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,11 +89,17 @@
 		87CD4A2E86D0BE63AFAF942E /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42F65DDA97468473D692C3 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; sourceTree = "<group>"; };
 		9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9C5E24EE1FC295EE0009BC14 /* DTShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTShareKit.framework; sourceTree = "<group>"; };
+		9C5E24F01FC2960B0009BC14 /* PTDingTalkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDingTalkManager.h; sourceTree = "<group>"; };
+		9C5E24F11FC2960B0009BC14 /* PTDingTalkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDingTalkManager.m; sourceTree = "<group>"; };
+		9C5E24F31FC2963C0009BC14 /* PTDingTalkRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDingTalkRequestHandler.h; sourceTree = "<group>"; };
+		9C5E24F41FC2963C0009BC14 /* PTDingTalkRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDingTalkRequestHandler.m; sourceTree = "<group>"; };
+		9C5E24F61FC296590009BC14 /* PTDingTalkRespManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDingTalkRespManager.h; sourceTree = "<group>"; };
+		9C5E24F71FC296590009BC14 /* PTDingTalkRespManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDingTalkRespManager.m; sourceTree = "<group>"; };
 		9C7285FF1FB9A7FC008D27A5 /* PTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTConstants.h; sourceTree = "<group>"; };
 		9C9B1FC51FC18EC4002412D9 /* PTThirdPlatformKit_Example_Developer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTThirdPlatformKit_Example_Developer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9B1FC71FC19039002412D9 /* PTConstants_Developer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTConstants_Developer.h; sourceTree = "<group>"; };
 		9C9B1FC81FC190C6002412D9 /* PTThirdPlatformKit_Developer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PTThirdPlatformKit_Developer-Info.plist"; sourceTree = "<group>"; };
-		A2225269EBD771EB9234EAF8 /* Pods-PTThirdPlatformKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF5EC14B3EB27858D9818D4 /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EEADE74070FD2397E6B0FEC8 /* Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig"; sourceTree = "<group>"; };
 		F45B4F44DE988F8C1137B1AC /* libPods-PTThirdPlatformKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +115,7 @@
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				E59DC665DC58AD9A8AF66558 /* libPods-PTThirdPlatformKit_Example.a in Frameworks */,
 				0D37D0CB061ADE27C66A498A /* libPods-PTThirdPlatformKit_Example.a in Frameworks */,
+				9C5E24EF1FC295EE0009BC14 /* DTShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +126,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				CE71961F2A0B8CA2DAA6D14F /* libPods-PTThirdPlatformKit_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +138,7 @@
 				9C9B1FB91FC18EC4002412D9 /* Foundation.framework in Frameworks */,
 				AD353EFB52B89F511B4C929B /* libPods-PTThirdPlatformKit_Example_Developer.a in Frameworks */,
 				AC334C9EC03E84F6B0A6E390 /* libPods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.a in Frameworks */,
+				9C5E259C1FC302390009BC14 /* DTShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +148,6 @@
 		46D4CCED5E473B2A62222211 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A2225269EBD771EB9234EAF8 /* Pods-PTThirdPlatformKit_Tests.debug.xcconfig */,
-				362A95AAFAC769612971361C /* Pods-PTThirdPlatformKit_Tests.release.xcconfig */,
 				CDF5EC14B3EB27858D9818D4 /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */,
 				9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */,
 				76D19AB998D44E7997B655EC /* Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig */,
@@ -187,6 +198,7 @@
 		6003F593195388D20070C39A /* Example for PTThirdPlatformKit */ = {
 			isa = PBXGroup;
 			children = (
+				9C5E24EC1FC295B20009BC14 /* CustomInjectPlatform */,
 				9C9B1FC71FC19039002412D9 /* PTConstants_Developer.h */,
 				9C7285FF1FB9A7FC008D27A5 /* PTConstants.h */,
 				6003F59C195388D20070C39A /* PTAppDelegate.h */,
@@ -243,6 +255,28 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		9C5E24EC1FC295B20009BC14 /* CustomInjectPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				9C5E24ED1FC295EE0009BC14 /* DingTalk */,
+			);
+			path = CustomInjectPlatform;
+			sourceTree = "<group>";
+		};
+		9C5E24ED1FC295EE0009BC14 /* DingTalk */ = {
+			isa = PBXGroup;
+			children = (
+				9C5E24EE1FC295EE0009BC14 /* DTShareKit.framework */,
+				9C5E24F31FC2963C0009BC14 /* PTDingTalkRequestHandler.h */,
+				9C5E24F41FC2963C0009BC14 /* PTDingTalkRequestHandler.m */,
+				9C5E24F01FC2960B0009BC14 /* PTDingTalkManager.h */,
+				9C5E24F11FC2960B0009BC14 /* PTDingTalkManager.m */,
+				9C5E24F61FC296590009BC14 /* PTDingTalkRespManager.h */,
+				9C5E24F71FC296590009BC14 /* PTDingTalkRespManager.m */,
+			);
+			path = DingTalk;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,12 +304,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "PTThirdPlatformKit_Tests" */;
 			buildPhases = (
-				15C0F0B8345EEA750A60BE16 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				CC2D25066A07765CA769CD42 /* [CP] Embed Pods Frameworks */,
-				732213B4713B212EE0EA1A05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,8 +348,14 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = flypigrmvb;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = KFL3FUXSZB;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					9C9B1FB01FC18EC4002412D9 = {
+						DevelopmentTeam = KFL3FUXSZB;
 					};
 				};
 			};
@@ -377,24 +414,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15C0F0B8345EEA750A60BE16 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PTThirdPlatformKit_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D1D533FD3332DABB3C93DA2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,21 +433,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		732213B4713B212EE0EA1A05 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A3047EC052A17A09549A5A5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B686730ACC9009BF50DBFE64 /* [CP] Check Pods Manifest.lock */ = {
@@ -462,7 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C16CA16E5DA96E49C5432A15 /* [CP] Embed Pods Frameworks */ = {
@@ -477,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example_Developer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C714E6DC13D6E6D76571B8AE /* [CP] Copy Pods Resources */ = {
@@ -496,22 +500,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CC2D25066A07765CA769CD42 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Tests/Pods-PTThirdPlatformKit_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example_Developer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E6264CD312B8D0059F8BAD29 /* [CP] Embed Pods Frameworks */ = {
@@ -537,8 +526,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* PTAppDelegate.m in Sources */,
+				9C5E24F81FC296590009BC14 /* PTDingTalkRespManager.m in Sources */,
 				6003F5A7195388D20070C39A /* PTViewController.m in Sources */,
+				9C5E24F51FC2963C0009BC14 /* PTDingTalkRequestHandler.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				9C5E24F21FC2960B0009BC14 /* PTDingTalkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +546,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5E24FB1FC296610009BC14 /* PTDingTalkRequestHandler.m in Sources */,
+				9C5E24FA1FC2965F0009BC14 /* PTDingTalkManager.m in Sources */,
 				9C9B1FB31FC18EC4002412D9 /* PTAppDelegate.m in Sources */,
+				9C5E24F91FC2965D0009BC14 /* PTDingTalkRespManager.m in Sources */,
 				9C9B1FB41FC18EC4002412D9 /* PTViewController.m in Sources */,
 				9C9B1FB51FC18EC4002412D9 /* main.m in Sources */,
 			);
@@ -676,10 +671,58 @@
 			baseConfigurationReference = CDF5EC14B3EB27858D9818D4 /* Pods-PTThirdPlatformKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFL3FUXSZB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTThirdPlatformKit/CustomInjectPlatform/DingTalk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTThirdPlatformKit/PTThirdPlatformKit-Prefix.pch";
 				INFOPLIST_FILE = "PTThirdPlatformKit/PTThirdPlatformKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"PTTestKit\"",
+					"-l\"PTThirdPlatformKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++.6\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AlipaySDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TencentOpenAPI\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -691,10 +734,58 @@
 			baseConfigurationReference = 9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFL3FUXSZB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTThirdPlatformKit/CustomInjectPlatform/DingTalk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTThirdPlatformKit/PTThirdPlatformKit-Prefix.pch";
 				INFOPLIST_FILE = "PTThirdPlatformKit/PTThirdPlatformKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"PTTestKit\"",
+					"-l\"PTThirdPlatformKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++.6\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AlipaySDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TencentOpenAPI\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -703,7 +794,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2225269EBD771EB9234EAF8 /* Pods-PTThirdPlatformKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -727,7 +817,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362A95AAFAC769612971361C /* Pods-PTThirdPlatformKit_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -747,9 +836,14 @@
 		};
 		9C9B1FC31FC18EC4002412D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A42F65DDA97468473D692C3 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.debug.xcconfig */;
+			baseConfigurationReference = 76D19AB998D44E7997B655EC /* Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFL3FUXSZB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTThirdPlatformKit/CustomInjectPlatform/DingTalk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTThirdPlatformKit/PTThirdPlatformKit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -758,7 +852,50 @@
 					"PT_DEVELOPER=1",
 				);
 				INFOPLIST_FILE = "PTThirdPlatformKit/PTThirdPlatformKit_Developer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"PTTestKit\"",
+					"-l\"PTThirdPlatformKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++.6\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AlipaySDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TencentOpenAPI\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PT_Developer = YES;
@@ -768,9 +905,14 @@
 		};
 		9C9B1FC41FC18EC4002412D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D6D121BFA0894831C818AB5 /* Pods-PTThirdPlatformKit_Example-PTThirdPlatformKit_Example_Developer.release.xcconfig */;
+			baseConfigurationReference = EEADE74070FD2397E6B0FEC8 /* Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFL3FUXSZB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTThirdPlatformKit/CustomInjectPlatform/DingTalk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTThirdPlatformKit/PTThirdPlatformKit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -779,7 +921,50 @@
 					"PT_DEVELOPER=1",
 				);
 				INFOPLIST_FILE = "PTThirdPlatformKit/PTThirdPlatformKit_Developer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"PTTestKit\"",
+					"-l\"PTThirdPlatformKit\"",
+					"-l\"SDWebImage\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++.6\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AlipaySDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TencentOpenAPI\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PT_Developer = YES;

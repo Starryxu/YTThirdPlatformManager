@@ -14,3 +14,9 @@
     @import UIKit;
     @import Foundation;
 #endif
+
+#if DeveloperMode
+#import "PTConstants_Developer.h"
+#else
+#import "PTConstants.h"
+#endif

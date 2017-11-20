@@ -20,6 +20,9 @@ typedef NS_ENUM(NSUInteger, PTThirdPlatformConfigKey) {
 
 @interface PTThirdPlatformManager ()
 @property (nonatomic, strong) NSMutableDictionary* thirdPlatformKeysConfig;
+@property (nonatomic, strong) NSMutableSet* thirdPlatformManagerClasses;
+@property (nonatomic, strong) NSMutableDictionary* thirdPlatformManagerConfig;
+@property (nonatomic, strong) NSMutableDictionary* thirdPlatformShareManagerConfig;
 @end
 
 @implementation PTThirdPlatformManager
@@ -142,6 +145,37 @@ DEF_SINGLETON
     return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformRedirectURI)];
 }
 
+
+#pragma mark 插件接入点
+
+/**
+ 插件接入点-添加登录或者是支付的管理类
+ 
+ @param platformType 自定义的第三方平台类型，大于999
+ @param managerClass 实现了PTAbsThirdPlatformManager接口的自定义第三方平台管理类
+ */
+- (void)addCustomPlatform:(NSInteger)platformType managerClass:(Class)managerClass {
+    NSString* classString = NSStringFromClass(managerClass);
+    if (classString) {
+        [self.thirdPlatformManagerConfig setObject:NSStringFromClass(managerClass) forKey:@(platformType)];
+        [self.thirdPlatformManagerClasses addObject:classString];
+    }
+}
+
+/**
+ 插件接入点-添加分享的管理类
+ 
+ @param sharePlatformType 自定义的第三方平台分享类型，大于999
+ @param managerClass 实现了PTAbsThirdPlatformManager接口的自定义第三方平台管理类
+ */
+- (void)addCustomSharePlatform:(NSInteger)sharePlatformType managerClass:(Class)managerClass {
+    NSString* classString = NSStringFromClass(managerClass);
+    if (classString) {
+        [self.thirdPlatformShareManagerConfig setObject:classString forKey:@(sharePlatformType)];
+        [self.thirdPlatformManagerClasses addObject:classString];
+    }
+}
+
 #pragma mark - ......::::::: Config :::::::......
 
 - (id)managerFromClassString:(NSString*)classString {
@@ -162,33 +196,48 @@ DEF_SINGLETON
 }
 
 // 配置管理类的类名
-- (NSArray*)thirdPlatformManagerClasses {
-    return @[@"PTAlipayManager",
-             @"PTTencentManager",
-             @"PTWeiboManager",
-             @"PTWXManager",
-             ];
+- (NSMutableSet*)thirdPlatformManagerClasses {
+    if (nil == _thirdPlatformManagerClasses) {
+        _thirdPlatformManagerClasses = [[NSMutableSet alloc] init];
+        [_thirdPlatformManagerClasses
+         addObjectsFromArray:@[@"PTAlipayManager",
+                               @"PTTencentManager",
+                               @"PTWeiboManager",
+                               @"PTWXManager",
+                               ]];
+    }
+    return _thirdPlatformManagerClasses;
 }
 
 // 配置第三方登录支付对应的管理类
-- (NSDictionary*)thirdPlatformManagerConfig {
-    return @{
-             @(PTThirdPlatformTypeWechat): @"PTWXManager",
-             @(PTThirdPlatformTypeTencentQQ): @"PTTencentManager",
-             @(PTThirdPlatformTypeWeibo): @"PTWeiboManager",
-             @(PTThirdPlatformTypeAlipay): @"PTAlipayManager",
-             };
+- (NSMutableDictionary*)thirdPlatformManagerConfig {
+    if (nil == _thirdPlatformManagerConfig) {
+        _thirdPlatformManagerConfig = [[NSMutableDictionary alloc] init];
+        [_thirdPlatformManagerConfig addEntriesFromDictionary:
+         @{
+           @(PTThirdPlatformTypeWechat): @"PTWXManager",
+           @(PTThirdPlatformTypeTencentQQ): @"PTTencentManager",
+           @(PTThirdPlatformTypeWeibo): @"PTWeiboManager",
+           @(PTThirdPlatformTypeAlipay): @"PTAlipayManager",
+           }];
+    }
+    return _thirdPlatformManagerConfig;
 }
 
 // 配置第三方分享对应的管理类
-- (NSDictionary*)thirdPlatformShareManagerConfig {
-    return @{
-             @(PTShareTypeWechat): @"PTWXManager",
-             @(PTShareTypeWechatLine): @"PTWXManager",
-             @(PTShareTypeQQ): @"PTTencentManager",
-             @(PTShareTypeQQZone): @"PTTencentManager",
-             @(PTShareTypeWeibo): @"PTWeiboManager",
-             };
+- (NSMutableDictionary*)thirdPlatformShareManagerConfig {
+    if (nil == _thirdPlatformShareManagerConfig) {
+        _thirdPlatformShareManagerConfig = [[NSMutableDictionary alloc] init];
+        [_thirdPlatformShareManagerConfig addEntriesFromDictionary:
+         @{
+           @(PTShareTypeWechat): @"PTWXManager",
+           @(PTShareTypeWechatLine): @"PTWXManager",
+           @(PTShareTypeQQ): @"PTTencentManager",
+           @(PTShareTypeQQZone): @"PTTencentManager",
+           @(PTShareTypeWeibo): @"PTWeiboManager",
+           }];
+    }
+    return _thirdPlatformShareManagerConfig;
 }
 
 // 第三方平台的APPID/APPKEY/APPSECRET等信息

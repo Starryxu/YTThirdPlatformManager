@@ -10,7 +10,7 @@
 #import "PTWXRespManager.h"
 #import "PTWXRequestHandler.h"
 #import <WXApi.h>
-#import "PTThirdPlatformConfigManager.h"
+#import "PTThirdPlatformManager.h"
 #import "PTThirdPlatformObject.h"
 
 @interface PTWXManager () <PTAbsThirdPlatformRespManagerDelegate>
@@ -24,7 +24,7 @@ DEF_SINGLETON
 - (void)thirdPlatConfigWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 子类实现
     //向微信注册
-    NSString* appID = [[PTThirdPlatformConfigManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWechat];
+    NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWechat];
     [WXApi registerApp:appID];
 }
 

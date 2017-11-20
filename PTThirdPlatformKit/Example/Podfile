@@ -16,4 +16,15 @@ target 'PTThirdPlatformKit_Example' do
 
     
   end
+  
+  target 'PTThirdPlatformKit_Example_Developer' do      
+      pod 'PTTestKit', :path => '../../PTTestKit'
+      
+      pod 'PTThirdPlatformKit', :path => '../'
+      pod 'PTThirdPlatformKit/AlipayManager', :path => '../'
+      pod 'PTThirdPlatformKit/TencentManager', :path => '../'
+      pod 'PTThirdPlatformKit/WeiboManager', :path => '../'
+      pod 'PTThirdPlatformKit/WXManager', :path => '../'
+      
+  end
 end

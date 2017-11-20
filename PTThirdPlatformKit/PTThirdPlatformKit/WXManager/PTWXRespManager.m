@@ -9,7 +9,7 @@
 #import "PTWXRespManager.h"
 #import "WXApi.h"
 #import "NSData+PTJsonConvert.h"
-#import "PTThirdPlatformConfigManager.h"
+#import "PTThirdPlatformManager.h"
 #import "NetworkRequestUtil.h"
 #import "PTThirdPlatformObject.h"
 
@@ -31,8 +31,8 @@ DEF_SINGLETON
     } else if ([resp isKindOfClass:[SendAuthResp class]]) {
         if (resp.errCode == WXSuccess) {
             // wx请求accessToken & openId
-            NSString* appID = [[PTThirdPlatformConfigManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWechat];
-            NSString* appSecret = [[PTThirdPlatformConfigManager sharedInstance] appSecretWithPlaform:PTThirdPlatformTypeWechat];
+            NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWechat];
+            NSString* appSecret = [[PTThirdPlatformManager sharedInstance] appSecretWithPlaform:PTThirdPlatformTypeWechat];
             NSString *urlString = [NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code", appID, appSecret, ((SendAuthResp*)resp).code];
             [NetworkRequestUtil requestWithURLString:urlString completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                 NSDictionary *resultDict = [data nsjsonObject];

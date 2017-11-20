@@ -1,16 +1,17 @@
 //
 //  PTThirdPlatformManager.h
-//  Pods
+//  Plush
 //
-//  Created by aron on 2017/11/13.
-//
+//  Created by aron on 2017/10/26.
+//  Copyright © 2017年 qingot. All rights reserved.
 //
 
-#ifndef PTThirdPlatformManager_h
-#define PTThirdPlatformManager_h
+#import <Foundation/Foundation.h>
+#import "PTAbsThirdPlatformManager.h"
+#import "PTThirdPlatformConfigurable.h"
 
-#import "PTThirdPlatformConfigManager.h"
-#import "PTThirdPlatformDefine.h"
-#import "PTThirdPlatformDefine.h"
+@interface PTThirdPlatformManager : NSObject <PTAbsThirdPlatformManager, PTThirdPlatformConfigurable>
 
-#endif /* PTThirdPlatformManager_h */
+AS_SINGLETON
+
+@end

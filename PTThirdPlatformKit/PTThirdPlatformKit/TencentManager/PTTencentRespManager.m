@@ -7,7 +7,7 @@
 //
 
 #import "PTTencentRespManager.h"
-#import "PTThirdPlatformConfigManager.h"
+#import "PTThirdPlatformManager.h"
 #import "PTThirdPlatformObject.h"
 
 @implementation PTTencentRespManager
@@ -18,7 +18,7 @@ DEF_SINGLETON
 {
     self = [super init];
     if (self) {
-        NSString* appID = [[PTThirdPlatformConfigManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ];
+        NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ];
         _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appID andDelegate:self];
     }
     return self;
@@ -26,7 +26,7 @@ DEF_SINGLETON
 
 - (TencentOAuth *)tencentOAuth {
     if (!_tencentOAuth) {
-        NSString* appID = [[PTThirdPlatformConfigManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ];
+        NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ];
         _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appID andDelegate:self];
     }
     return _tencentOAuth;

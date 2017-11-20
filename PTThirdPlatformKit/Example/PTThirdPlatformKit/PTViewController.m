@@ -7,7 +7,7 @@
 //
 
 #import "PTViewController.h"
-#import <PTThirdPlatformKit/PTThirdPlatformConfigManager.h>
+#import <PTThirdPlatformKit/PTThirdPlatformManager.h>
 #import "PTConstants.h"
 
 
@@ -23,7 +23,7 @@
 
     typeof(self) __weak weakSelf = self;
     [self addActionWithName:@"QQ Login" callback:^{
-        [[PTThirdPlatformConfigManager sharedInstance] signInWithType:PTThirdPlatformTypeTencentQQ fromViewController:weakSelf callback:^(ThirdPlatformUserInfo *userInfo, NSError *err) {
+        [[PTThirdPlatformManager sharedInstance] signInWithType:PTThirdPlatformTypeTencentQQ fromViewController:weakSelf callback:^(ThirdPlatformUserInfo *userInfo, NSError *err) {
             
         }];
     }];

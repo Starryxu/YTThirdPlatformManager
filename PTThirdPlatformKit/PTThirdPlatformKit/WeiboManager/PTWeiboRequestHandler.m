@@ -8,7 +8,7 @@
 
 #import "PTWeiboRequestHandler.h"
 #import <WeiboSDK/WeiboSDK.h>
-#import "PTThirdPlatformConfigManager.h"
+#import "PTThirdPlatformManager.h"
 #import "PTThirdPlatformObject.h"
 #import "UIImage+PTUtil.h"
 
@@ -17,7 +17,7 @@
 // 第三方授权
 + (BOOL)sendAuthInViewController:(UIViewController *)viewController {
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    NSString* redirectURL = [[PTThirdPlatformConfigManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWeibo];
+    NSString* redirectURL = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWeibo];
     request.redirectURI = redirectURL;
     request.scope = @"all";
     request.userInfo = @{@"SSO_From": @"SendMessageToWeiboViewController",

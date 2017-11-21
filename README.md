@@ -225,6 +225,8 @@ APP调用第三方APP需要用到的，下面的配置文件配置了微信、�
 <string>sinaweibosso</string>
 <string>weibosdk</string>
 <string>weibosdk2.5</string>
+<string>dingtalk</string>
+<string>dingtalk-open</string>
 </array>
 ```
   
@@ -256,45 +258,21 @@ end
 
 #### 扩展第三方SDK 
 
-添加了新的第三方SDK，在SDK配置这个步骤好了之后，需要做以下事情
+可以以插件的方式添加了自定义的第三方SDK，在SDK配置这个步骤好了之后，需要一下步骤
 - 继承`PTBaseThirdPlatformManager`类生成一个第三方SDK的管理器
 - 实现`PTAbsThirdPlatformRequestHandler`接口生成一个第三发SDK的底层调用
-- 继承`PTBaseThirdPlatformRespManager`类生成一个第三方SDK的响应回调
-以微信平台为例，生成三个平台相关的类文件：  
-![微信平台文件](https://gitee.com/uploads/images/2017/1101/073749_321dd6da_300384.png "微信平台文件图.png")  
+- 继承`PTBaseThirdPlatformRespManager`类生成一个第三方SDK的响应回调  
 
-- 在配置中配置第三方平台管理类以及不同的类型对应的管理类  
+以钉钉平台为例，生成三个平台相关的类文件：  
+![钉钉平台文件图](https://gitee.com/uploads/images/2017/1120/210013_bc2c1a9b_300384.png "钉钉平台文件图.png")  
+
+调用  `PTThirdPlatformManager`类的两个接口  `addCustomPlatform`、 `addCustomSharePlatform` 添加自定义的第三方平台。
 
 ```objc
-// 配置管理类的类名
-- (NSArray*)thirdPlatformManagerClasses {
-    return @[@"PTAlipayManager",
-             @"PTTencentManager",
-             @"PTWeiboManager",
-             @"PTWXManager",
-             ];
-}
-
-// 配置第三方登录支付对应的管理类
-- (NSDictionary*)thirdPlatformManagerConfig {
-    return @{
-             @(PTThirdPlatformTypeWechat): @"PTWXManager",
-             @(PTThirdPlatformTypeTencentQQ): @"PTTencentManager",
-             @(PTThirdPlatformTypeWeibo): @"PTWeiboManager",
-             @(PTThirdPlatformTypeAlipay): @"PTAlipayManager",
-             };
-}
-
-// 配置第三方分享对应的管理类
-- (NSDictionary*)thirdPlatformShareManagerConfig {
-    return @{
-             @(PTShareTypeWechat): @"PTWXManager",
-             @(PTShareTypeWechatLine): @"PTWXManager",
-             @(PTShareTypeQQ): @"PTTencentManager",
-             @(PTShareTypeQQZone): @"PTTencentManager",
-             @(PTShareTypeWeibo): @"PTWeiboManager",
-             };
-}
+// 自定义的第三方平台以插件的方式添加
+    [[PTThirdPlatformManager sharedInstance] addCustomSharePlatform:PTCustumShareTypeDingTalk managerClass:PTDingTalkManager.class];
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTCustumShareTypeDingTalk appID:kDingTalkAppID appKey:nil appSecret:nil redirectURL:nil];
 ```
+
 完了之后可以回到`怎么使用`步骤查看怎么使用了。
 

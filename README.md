@@ -44,13 +44,16 @@ Pod installation complete! There are 6 dependencies from the Podfile and 5 total
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // 自定义的第三方平台以插件的方式添加
+    [[PTThirdPlatformManager sharedInstance] addCustomSharePlatform:PTCustumShareTypeDingTalk managerClass:PTDingTalkManager.class];
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTCustumShareTypeDingTalk appID:kDingTalkAppID appKey:nil appSecret:nil redirectURL:nil];
+    
     // 第三方平台注册
-    [[PTThirdPlatformConfigManager sharedInstance] setPlaform:PTThirdPlatformTypeWechat appID:kWXAppID appKey:nil appSecret:kWXAppSecret redirectURL:nil];
-    [[PTThirdPlatformConfigManager sharedInstance] setPlaform:PTThirdPlatformTypeTencentQQ appID:kTencentAppID appKey:kTencentAppKey appSecret:kTencentAppSecret redirectURL:nil];
-    [[PTThirdPlatformConfigManager sharedInstance] setPlaform:PTThirdPlatformTypeWeibo appID:kWeiboAppID appKey:kWeiboAppKey appSecret:kWeiboAppSecret redirectURL:kWeiboRedirectURI];
-    [[PTThirdPlatformConfigManager sharedInstance] setPlaform:PTThirdPlatformTypeAlipay appID:nil appKey:nil appSecret:nil redirectURL:nil];
-    [[PTThirdPlatformConfigManager sharedInstance] thirdPlatConfigWithApplication:application didFinishLaunchingWithOptions:launchOptions];
-
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeWechat appID:kWXAppID appKey:nil appSecret:kWXAppSecret redirectURL:nil];
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeTencentQQ appID:kTencentAppID appKey:kTencentAppKey appSecret:kTencentAppSecret redirectURL:nil];
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeWeibo appID:kWeiboAppID appKey:kWeiboAppKey appSecret:kWeiboAppSecret redirectURL:kWeiboRedirectURI];
+    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeAlipay appID:nil appKey:nil appSecret:nil redirectURL:nil];
+    [[PTThirdPlatformManager sharedInstance] thirdPlatConfigWithApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     return YES;
 }

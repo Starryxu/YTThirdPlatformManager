@@ -19,23 +19,20 @@ iOS第三方平台集成组件化(1.0.1 版本)
 运行 `pod install` 命令安装依赖库  
 
 ```ruby
-➜  Example git:(master) pod install
+➜  Example git:(master) ✗ pod install
 Analyzing dependencies
-Fetching podspec for `PTFoundation` from `../../PTFoundation`
 Fetching podspec for `PTTestKit` from `../../PTTestKit`
 Fetching podspec for `PTThirdPlatformKit` from `../`
 Downloading dependencies
-Using PTFoundation (0.1.0)
 Using PTTestKit (0.1.0)
 Using PTThirdPlatformKit (0.1.0)
-Installing SDWebImage (4.2.2)
-Installing WechatOpenSDK (1.8.0)
-Installing WeiboSDK (3.1.3)
-Installing YYModel (1.0.4)
+Using SDWebImage (4.0.0)
+Using WechatOpenSDK (1.7.7)
+Using WeiboSDK (3.1.3)
 Generating Pods project
 Integrating client project
 Sending stats
-Pod installation complete! There are 3 dependencies from the Podfile and 7 total pods installed.
+Pod installation complete! There are 6 dependencies from the Podfile and 5 total pods installed.
 ```
 安装完成打开 `PTThirdPlatformKit.xcworkspace` 文件即可.  
 默认安装所有的平台，可以修改podfile配置一个或者多个平台，具体可以查看 [选择需要的第三方平台](#Mark) 的介绍

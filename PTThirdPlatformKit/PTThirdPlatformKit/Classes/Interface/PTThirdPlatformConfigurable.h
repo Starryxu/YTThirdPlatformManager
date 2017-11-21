@@ -12,24 +12,27 @@
 @protocol PTThirdPlatformConfigurable <NSObject>
 
 /**
- *  设置平台的appkey
+ *  按需设置平台的appkey/appID/appSecret/redirectURL/URLSchemes
  *
  *  @param platformType 平台类型 @see PTThirdPlatformType
  *  @param appKey       第三方平台的appKey
  *  @param appID        第三方平台的appID
  *  @param appSecret    第三方平台的appSecret
  *  @param redirectURL  redirectURL
+ *  @param URLSchemes   URLSchemes，目前支付宝使用到，调用支付宝的时候需要传递一个URLSchemes参数
  */
 - (BOOL)setPlaform:(PTThirdPlatformType)platformType
              appID:(NSString *)appID
             appKey:(NSString *)appKey
          appSecret:(NSString *)appSecret
-       redirectURL:(NSString *)redirectURL;
+       redirectURL:(NSString *)redirectURL
+        URLSchemes:(NSString*)URLSchemes;
 
 - (NSString*)appIDWithPlaform:(PTThirdPlatformType)platformType;
 - (NSString*)appKeyWithPlaform:(PTThirdPlatformType)platformType;
 - (NSString*)appSecretWithPlaform:(PTThirdPlatformType)platformType;
 - (NSString*)appRedirectURLWithPlaform:(PTThirdPlatformType)platformType;
+- (NSString*)URLSchemesWithPlaform:(PTThirdPlatformType)platformType;
 
 
 /**

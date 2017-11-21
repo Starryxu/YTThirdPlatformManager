@@ -10,6 +10,7 @@
 #import "PTAlipayRespManager.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "PTThirdPlatformObject.h"
+#import "PTThirdPlatformManager.h"
 
 @implementation PTAlipayRequestHandler
 
@@ -17,7 +18,7 @@
 + (BOOL)payWithOrder:(OrderModel*)order {
     // 开始支付
     NSString* orderString = order.sign;
-    NSString* appScheme = @"alipayPlush";
+    NSString* appScheme = [[PTThirdPlatformManager sharedInstance] URLSchemesWithPlaform:PTThirdPlatformTypeAlipay];
     [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
         NSLog(@"reslut = %@",resultDic);
         [[PTAlipayRespManager sharedInstance] setResponse:resultDic];

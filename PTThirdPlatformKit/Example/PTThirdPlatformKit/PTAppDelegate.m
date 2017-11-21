@@ -15,15 +15,44 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // 自定义的第三方平台以插件的方式添加
-    [[PTThirdPlatformManager sharedInstance] addCustomSharePlatform:PTCustumShareTypeDingTalk managerClass:PTDingTalkManager.class];
-    [[PTThirdPlatformManager sharedInstance] setPlaform:PTCustumShareTypeDingTalk appID:kDingTalkAppID appKey:nil appSecret:nil redirectURL:nil];
+    PTThirdPlatformManager* configInstance = [PTThirdPlatformManager sharedInstance];
+    [configInstance addCustomSharePlatform:PTCustumShareTypeDingTalk
+                              managerClass:PTDingTalkManager.class];
+    [configInstance setPlaform:PTCustumShareTypeDingTalk
+                         appID:kDingTalkAppID
+                        appKey:nil
+                     appSecret:nil
+                   redirectURL:nil
+                    URLSchemes:nil];
+    
     
     // 第三方平台注册
-    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeWechat appID:kWXAppID appKey:nil appSecret:kWXAppSecret redirectURL:nil];
-    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeTencentQQ appID:kTencentAppID appKey:kTencentAppKey appSecret:kTencentAppSecret redirectURL:nil];
-    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeWeibo appID:kWeiboAppID appKey:kWeiboAppKey appSecret:kWeiboAppSecret redirectURL:kWeiboRedirectURI];
-    [[PTThirdPlatformManager sharedInstance] setPlaform:PTThirdPlatformTypeAlipay appID:nil appKey:nil appSecret:nil redirectURL:nil];
-    [[PTThirdPlatformManager sharedInstance] thirdPlatConfigWithApplication:application didFinishLaunchingWithOptions:launchOptions];
+    [configInstance setPlaform:PTThirdPlatformTypeWechat
+                         appID:kWXAppID
+                        appKey:nil
+                     appSecret:kWXAppSecret
+                   redirectURL:nil
+                    URLSchemes:nil];
+    [configInstance setPlaform:PTThirdPlatformTypeTencentQQ
+                         appID:kTencentAppID
+                        appKey:kTencentAppKey
+                     appSecret:kTencentAppSecret
+                   redirectURL:nil
+                    URLSchemes:nil];
+    [configInstance setPlaform:PTThirdPlatformTypeWeibo
+                         appID:kWeiboAppID
+                        appKey:kWeiboAppKey
+                     appSecret:kWeiboAppSecret
+                   redirectURL:kWeiboRedirectURI
+                    URLSchemes:nil];
+    [configInstance setPlaform:PTThirdPlatformTypeAlipay
+                         appID:nil
+                        appKey:nil
+                     appSecret:nil
+                   redirectURL:nil
+                    URLSchemes:kAlipayURLScheme];
+    [configInstance thirdPlatConfigWithApplication:application
+                     didFinishLaunchingWithOptions:launchOptions];
     
     return YES;
 }

@@ -43,6 +43,15 @@
         shareModel.platform = PTCustumShareTypeDingTalk;
         [[PTThirdPlatformManager sharedInstance] shareWithModel:shareModel];
     }];
+    
+    
+    // 支付信息模型
+    OrderModel* order = [[OrderModel alloc] init];
+    [self addActionWithName:@"支付宝支付" callback:^{
+        [[PTThirdPlatformManager sharedInstance] payWithPlateform:PTThirdPlatformTypeAlipay order:order paymentBlock:^(BOOL result) {
+            
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

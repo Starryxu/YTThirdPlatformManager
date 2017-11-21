@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, PTThirdPlatformConfigKey) {
     PTThirdPlatformAppKey,
     PTThirdPlatformAppSecret,
     PTThirdPlatformRedirectURI,
+    PTThirdPlatformURLSchemes,
 };
 
 
@@ -119,12 +120,15 @@ DEF_SINGLETON
              appID:(NSString *)appID
             appKey:(NSString *)appKey
          appSecret:(NSString *)appSecret
-       redirectURL:(NSString *)redirectURL {
+       redirectURL:(NSString *)redirectURL
+        URLSchemes:(NSString*)URLSchemes {
     [self.thirdPlatformKeysConfig
      setObject:@{@(PTThirdPlatformAppID): ValueOrEmpty(appID),
                  @(PTThirdPlatformAppKey): ValueOrEmpty(appKey),
                  @(PTThirdPlatformAppSecret): ValueOrEmpty(appSecret),
-                 @(PTThirdPlatformRedirectURI): ValueOrEmpty(redirectURL)}
+                 @(PTThirdPlatformRedirectURI): ValueOrEmpty(redirectURL),
+                 @(PTThirdPlatformURLSchemes): ValueOrEmpty(URLSchemes),
+                 }
      forKey:@(platformType)];
     return YES;
 }
@@ -143,6 +147,10 @@ DEF_SINGLETON
 
 - (NSString*)appRedirectURLWithPlaform:(PTThirdPlatformType)platformType {
     return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformRedirectURI)];
+}
+
+- (NSString*)URLSchemesWithPlaform:(PTThirdPlatformType)platformType {
+    return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformURLSchemes)];
 }
 
 

@@ -22,6 +22,7 @@ static NSString *kWeiboAppKey = @" ";
 static NSString *kWeiboAppSecret = @" ";
 static NSString *kWeiboRedirectURI = @"https://api.weibo.com/oauth2/default.html";
 static NSString *kDingTalkAppID = @"dingoak5hqhuvmpfhpnjvt";
+static NSString *kAlipayURLScheme = @"alipayPlush";
 
 // !!! @important 自定义第三平台的类型需要大于等于999，以避免和内置的第三方平台的类型冲突
 typedef enum : NSUInteger {

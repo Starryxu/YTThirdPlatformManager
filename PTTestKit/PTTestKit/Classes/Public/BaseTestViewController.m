@@ -10,7 +10,7 @@
 
 @implementation ActionCellModel
 
--(instancetype)initWithActionName:(NSString*)actionName actionCallBack:(void(^)())callback {
+-(instancetype)initWithActionName:(NSString*)actionName actionCallBack:(void(^)(void))callback {
     if (self = [super init]) {
         _actionName = actionName;
         _actionCallBack = callback;

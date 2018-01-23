@@ -1,4 +1,4 @@
-use_frameworks!
+#use_frameworks!
 
 target 'PTTestKit_Example' do
   pod 'PTTestKit', :path => '../'

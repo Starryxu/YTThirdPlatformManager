@@ -12,9 +12,9 @@
 @interface ActionCellModel : NSObject
 
 @property (nonatomic, copy) NSString* actionName;
-@property (nonatomic, copy) void(^actionCallBack)();
+@property (nonatomic, copy) void(^actionCallBack)(void);
 
--(instancetype)initWithActionName:(NSString*)actionName actionCallBack:(void(^)())callback;
+-(instancetype)initWithActionName:(NSString*)actionName actionCallBack:(void(^)(void))callback;
 
 @end
 
@@ -23,6 +23,6 @@
 
 @property (nonatomic, weak) UITableView* tableView;
 
-- (void)addActionWithName:(NSString*)actionName callback:(void(^)())callback;
+- (void)addActionWithName:(NSString*)actionName callback:(void(^)(void))callback;
 
 @end

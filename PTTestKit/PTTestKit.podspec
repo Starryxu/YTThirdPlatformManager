@@ -1,15 +1,8 @@
-#
-# Be sure to run `pod lib lint PTTestKit.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = 'PTTestKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PTTestKit.'
+  s.summary          = 'Wow PTTestKit.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,26 +10,37 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
+    # 长的描述信息
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Wow this is a amazing kit,
+Enjoy yourself!
                        DESC
 
-  s.homepage         = 'https://github.com/flypigrmvb/PTTestKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'flypigrmvb' => '862709539@qq.com' }
-  s.source           = { :git => 'https://github.com/flypigrmvb/PTTestKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    # 提交到git服务区的项目主页，没提交可以指定任意值，但需要保留这一项，否则会报错
+    # attributes: Missing required attribute `homepage`.
+    s.homepage         = 'https://github.com/flypigrmvb/PTTestKit'
+    # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+    # 授权文件
+    s.license          = { :type => 'MIT', :file => 'LICENSE' }
+    # 用户信息
+    s.author           = { 'flypigrmvb' => '862709539@qq.com' }
+    # 提交到git上的源码路径，没提交可以指定任意值，但需要保留这一项，否则会报错
+    # attributes: Missing required attribute `source`.
+    s.source           = { :git => 'https://github.com/flypigrmvb/PTTestKit.git', :tag => s.version.to_s }
+    # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+    # 指定最低的ios版本
+    s.ios.deployment_target = '8.0'
 
-  s.source_files = 'PTTestKit/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PTTestKit' => ['PTTestKit/Assets/*.png']
-  # }
+    # 源文件的路径
+    s.source_files = 'PTTestKit/Classes/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    # 公共的头文件，按需设置
+    s.public_header_files = 'PTTestKit/Classes/Public/**/*.h'
+    # 私有的头文件，按需设置
+    s.private_header_files = 'PTTestKit/Classes/Private/**/*.h'
+    # 依赖的系统Framework，按需设置
+    # s.frameworks = 'UIKit', 'MapKit'
+    # 依赖其他的pod库，按需设置
+    # s.dependency 'AFNetworking', '~> 2.3'
 end

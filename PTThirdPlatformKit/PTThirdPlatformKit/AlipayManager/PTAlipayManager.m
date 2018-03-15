@@ -63,7 +63,7 @@ DEF_SINGLETON
 /**
  第三方支付
  */
-- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(BOOL result))paymentBlock {
+- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(PTPayResult result))paymentBlock {
     self.paymentBlock = paymentBlock;
     // 使用支付宝支付
     [PTAlipayRespManager sharedInstance].delegate = self;

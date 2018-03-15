@@ -22,7 +22,6 @@
 DEF_SINGLETON
 
 - (void)thirdPlatConfigWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 子类实现
     //向微信注册
     NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeWechat];
     [WXApi registerApp:appID];
@@ -64,7 +63,7 @@ DEF_SINGLETON
 /**
  第三方支付
  */
-- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(BOOL result))paymentBlock {
+- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(PTPayResult result))paymentBlock {
     self.paymentBlock = paymentBlock;
     // 使用微信支付
     [PTWXRespManager sharedInstance].delegate = self;

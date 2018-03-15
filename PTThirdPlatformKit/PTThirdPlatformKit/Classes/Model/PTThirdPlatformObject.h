@@ -94,3 +94,11 @@
 @property (nonatomic, strong) NSString* orderID;
 @end
 
+// 第三方平台的配置信息
+@interface PTThifdPlatformConfig : NSObject
+@property (nonatomic, copy) NSString *appID;
+@property (nonatomic, copy) NSString *appKey;
+@property (nonatomic, copy) NSString *appSecret;
+@property (nonatomic, copy) NSString *redirectURL;
+@property (nonatomic, copy) NSString *URLSchemes;
+@end

@@ -17,4 +17,6 @@ AS_SINGLETON
 
 @property (nonatomic, strong) TencentOAuth* tencentOAuth;
 
+- (void)setPayResult:(PTPayResult)payResult;
+
 @end

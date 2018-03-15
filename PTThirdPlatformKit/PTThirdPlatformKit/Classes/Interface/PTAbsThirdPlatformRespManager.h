@@ -16,7 +16,7 @@
 
 @optional
 
-- (void)respManagerDidRecvPayResponse:(BOOL)result platform:(PTThirdPlatformType)platform;
+- (void)respManagerDidRecvPayResponse:(PTPayResult)result platform:(PTThirdPlatformType)platform;
 - (void)respManagerDidRecvAuthResponse:(ThirdPlatformUserInfo *)response platform:(PTThirdPlatformType)platform;
 - (void)respManagerDidRecvMessageResponse:(BOOL)result platform:(PTShareType)platform;
 

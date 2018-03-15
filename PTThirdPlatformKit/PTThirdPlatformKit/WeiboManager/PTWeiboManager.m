@@ -20,7 +20,6 @@
 DEF_SINGLETON
 
 - (void)thirdPlatConfigWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 子类实现
     // 初始化微博模块
 #if DEBUG
     [WeiboSDK enableDebugMode:YES];

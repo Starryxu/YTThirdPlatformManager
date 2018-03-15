@@ -48,7 +48,13 @@
     // 支付信息模型
     OrderModel* order = [[OrderModel alloc] init];
     [self addActionWithName:@"支付宝支付" callback:^{
-        [[PTThirdPlatformManager sharedInstance] payWithPlateform:PTThirdPlatformTypeAlipay order:order paymentBlock:^(BOOL result) {
+        [[PTThirdPlatformManager sharedInstance] payWithPlateform:PTThirdPlatformTypeAlipay order:order paymentBlock:^(PTPayResult result) {
+            
+        }];
+    }];
+    
+    [self addActionWithName:@"QQ支付" callback:^{
+        [[PTThirdPlatformManager sharedInstance] payWithPlateform:PTThirdPlatformTypeTencentQQ order:order paymentBlock:^(PTPayResult result) {
             
         }];
     }];

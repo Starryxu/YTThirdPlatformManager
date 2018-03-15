@@ -100,7 +100,7 @@ DEF_SINGLETON
  @param order 支付订单模型
  @param paymentBlock 支付结果回调
  */
-- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(BOOL result))paymentBlock {
+- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(PTPayResult result))paymentBlock {
     NSString* classString = [[self thirdPlatformManagerConfig] objectForKey:@(payMethodType)];
     id<PTAbsThirdPlatformManager> manager = [self managerFromClassString:classString];
     [manager payWithPlateform:payMethodType
@@ -122,37 +122,71 @@ DEF_SINGLETON
          appSecret:(NSString *)appSecret
        redirectURL:(NSString *)redirectURL
         URLSchemes:(NSString*)URLSchemes {
-    [self.thirdPlatformKeysConfig
-     setObject:@{@(PTThirdPlatformAppID): ValueOrEmpty(appID),
-                 @(PTThirdPlatformAppKey): ValueOrEmpty(appKey),
-                 @(PTThirdPlatformAppSecret): ValueOrEmpty(appSecret),
-                 @(PTThirdPlatformRedirectURI): ValueOrEmpty(redirectURL),
-                 @(PTThirdPlatformURLSchemes): ValueOrEmpty(URLSchemes),
-                 }
-     forKey:@(platformType)];
+    [self setPlaform:platformType subType:PTThirdPlatformSubTypeTotal appID:appID appKey:appKey appSecret:appSecret redirectURL:redirectURL URLSchemes:URLSchemes];
+    return YES;
+}
+
+- (BOOL)setPlaform:(PTThirdPlatformType)platformType
+           subType:(PTThirdPlatformSubType)subType
+             appID:(NSString *)appID
+            appKey:(NSString *)appKey
+         appSecret:(NSString *)appSecret
+       redirectURL:(NSString *)redirectURL
+        URLSchemes:(NSString*)URLSchemes {
+    NSDictionary* subTypeConfig = @{@(PTThirdPlatformAppID): ValueOrEmpty(appID),
+                                    @(PTThirdPlatformAppKey): ValueOrEmpty(appKey),
+                                    @(PTThirdPlatformAppSecret): ValueOrEmpty(appSecret),
+                                    @(PTThirdPlatformRedirectURI): ValueOrEmpty(redirectURL),
+                                    @(PTThirdPlatformURLSchemes): ValueOrEmpty(URLSchemes),
+                                    };
+    
+    if (![self.thirdPlatformKeysConfig objectForKey:@(platformType)]) {
+        [self.thirdPlatformKeysConfig setObject:[@{} mutableCopy] forKey:@(platformType)];
+    }
+    
+    [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] setObject:subTypeConfig forKey:@(subType)];
     return YES;
 }
 
 - (NSString*)appIDWithPlaform:(PTThirdPlatformType)platformType {
-    return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformAppID)];
+    return [self appIDWithPlaform:platformType subType:PTThirdPlatformSubTypeTotal];
 }
 
 - (NSString*)appKeyWithPlaform:(PTThirdPlatformType)platformType {
-    return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformAppKey)];
+    return [self appKeyWithPlaform:platformType subType:PTThirdPlatformSubTypeTotal];
 }
 
 - (NSString*)appSecretWithPlaform:(PTThirdPlatformType)platformType {
-     return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformAppSecret)];
+    return [self appSecretWithPlaform:platformType subType:PTThirdPlatformSubTypeTotal];
 }
 
 - (NSString*)appRedirectURLWithPlaform:(PTThirdPlatformType)platformType {
-    return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformRedirectURI)];
+    return [self appRedirectURLWithPlaform:platformType subType:PTThirdPlatformSubTypeTotal];
 }
 
 - (NSString*)URLSchemesWithPlaform:(PTThirdPlatformType)platformType {
-    return [[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(PTThirdPlatformURLSchemes)];
+    return [self URLSchemesWithPlaform:platformType subType:PTThirdPlatformSubTypeTotal];
 }
 
+- (NSString*)appIDWithPlaform:(PTThirdPlatformType)platformType subType:(PTThirdPlatformSubType)subType {
+    return [[[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(subType)] objectForKey:@(PTThirdPlatformAppID)];
+}
+
+- (NSString*)appKeyWithPlaform:(PTThirdPlatformType)platformType subType:(PTThirdPlatformSubType)subType {
+    return [[[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(subType)] objectForKey:@(PTThirdPlatformAppKey)];
+}
+
+- (NSString*)appSecretWithPlaform:(PTThirdPlatformType)platformType subType:(PTThirdPlatformSubType)subType {
+    return [[[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(subType)] objectForKey:@(PTThirdPlatformAppSecret)];
+}
+
+- (NSString*)appRedirectURLWithPlaform:(PTThirdPlatformType)platformType subType:(PTThirdPlatformSubType)subType {
+    return [[[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(subType)] objectForKey:@(PTThirdPlatformRedirectURI)];
+}
+
+- (NSString*)URLSchemesWithPlaform:(PTThirdPlatformType)platformType subType:(PTThirdPlatformSubType)subType {
+    return [[[self.thirdPlatformKeysConfig objectForKey:@(platformType)] objectForKey:@(subType)] objectForKey:@(PTThirdPlatformURLSchemes)];
+}
 
 #pragma mark 插件接入点
 

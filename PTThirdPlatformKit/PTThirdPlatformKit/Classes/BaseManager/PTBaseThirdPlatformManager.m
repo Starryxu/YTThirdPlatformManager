@@ -75,7 +75,7 @@
  @param order 支付订单模型
  @param paymentBlock 支付结果回调
  */
-- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(BOOL result))paymentBlock {
+- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(PTPayResult result))paymentBlock {
     // 空实现，子类实现该方法
 }
 

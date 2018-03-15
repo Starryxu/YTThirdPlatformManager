@@ -9,6 +9,8 @@
 #import "PTTencentRequestHandler.h"
 #import "PTTencentRespManager.h"
 #import "PTThirdPlatformObject.h"
+#import "QQWalletSDK.h"
+#import "PTThirdPlatformManager.h"
 
 @implementation PTTencentRequestHandler
 
@@ -42,6 +44,33 @@
         sent = [QQApiInterface SendReqToQZone:req];
     }
     return EQQAPISENDSUCESS == sent;
+}
+
+// 支付
++ (BOOL)payWithOrder:(OrderModel*)order {
+    // 发起支付
+    NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ subType:PTThirdPlatformSubTypePay];
+    NSString* scheme = [[PTThirdPlatformManager sharedInstance] URLSchemesWithPlaform:PTThirdPlatformTypeTencentQQ subType:PTThirdPlatformSubTypePay];
+    [[QQWalletSDK sharedInstance] startPayWithAppId:appID
+                                        bargainorId:order.prepayid
+                                            tokenId:order.package
+                                          signature:order.sign
+                                              nonce:order.noncestr
+                                             scheme:scheme
+                                         completion:^(QQWalletErrCode errCode, NSString *errStr){
+                                             // 支付完成的回调处理
+                                             if (errCode == QQWalletErrCodeSuccess) {
+                                                 // 对支付成功的处理
+                                                 [[PTTencentRespManager sharedInstance] setPayResult:PTPayResultSuccess];
+                                             } else if (errCode == QQWalletErrCodeUserCancel) {
+                                                 // 对支付取消的处理
+                                                 [[PTTencentRespManager sharedInstance] setPayResult:PTPayResultCancel];
+                                             } else {
+                                                 // 对支付失败的处理
+                                                 [[PTTencentRespManager sharedInstance] setPayResult:PTPayResultFailed];
+                                             }
+                                         }];
+    return YES;
 }
 
 @end

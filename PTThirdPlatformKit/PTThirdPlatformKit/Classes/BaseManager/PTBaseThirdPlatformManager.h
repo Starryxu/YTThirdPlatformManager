@@ -11,7 +11,7 @@
 
 @interface PTBaseThirdPlatformManager : NSObject <PTAbsThirdPlatformManager>
 
-@property (nonatomic, copy) void (^paymentBlock)(BOOL result);
+@property (nonatomic, copy) void (^paymentBlock)(PTPayResult result);
 @property (nonatomic, copy) void (^callback)(ThirdPlatformUserInfo* userInfo, NSError* err);
 @property (nonatomic, copy) void (^shareResultBlock)(PTShareType, PTShareResult, NSError *);
 

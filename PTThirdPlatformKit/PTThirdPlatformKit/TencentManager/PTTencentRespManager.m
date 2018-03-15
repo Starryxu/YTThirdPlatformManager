@@ -18,7 +18,7 @@ DEF_SINGLETON
 {
     self = [super init];
     if (self) {
-        NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ];
+        NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ subType:PTThirdPlatformSubTypeAuthShare];
         _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appID andDelegate:self];
     }
     return self;
@@ -26,7 +26,7 @@ DEF_SINGLETON
 
 - (TencentOAuth *)tencentOAuth {
     if (!_tencentOAuth) {
-        NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ];
+        NSString* appID = [[PTThirdPlatformManager sharedInstance] appIDWithPlaform:PTThirdPlatformTypeTencentQQ subType:PTThirdPlatformSubTypeAuthShare];
         _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appID andDelegate:self];
     }
     return _tencentOAuth;
@@ -145,6 +145,14 @@ DEF_SINGLETON
  */
 - (void)isOnlineResponse:(NSDictionary *)response {
     NSLog(@"===");
+}
+
+#pragma mark - ......::::::: Public :::::::......
+
+- (void)setPayResult:(PTPayResult)payResult {
+    if ([self.delegate respondsToSelector:@selector(respManagerDidRecvPayResponse:platform:)]) {
+        [self.delegate respManagerDidRecvPayResponse:payResult platform:PTThirdPlatformTypeTencentQQ];
+    }
 }
 
 @end

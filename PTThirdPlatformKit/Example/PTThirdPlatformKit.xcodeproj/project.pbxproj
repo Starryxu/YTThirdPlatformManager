@@ -17,7 +17,6 @@
 		6003F5A7195388D20070C39A /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PTViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9C5E24EF1FC295EE0009BC14 /* DTShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5E24EE1FC295EE0009BC14 /* DTShareKit.framework */; };
 		9C5E24F21FC2960B0009BC14 /* PTDingTalkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F11FC2960B0009BC14 /* PTDingTalkManager.m */; };
 		9C5E24F51FC2963C0009BC14 /* PTDingTalkRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E24F41FC2963C0009BC14 /* PTDingTalkRequestHandler.m */; };
@@ -32,7 +31,6 @@
 		9C9B1FB71FC18EC4002412D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		9C9B1FB81FC18EC4002412D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		9C9B1FB91FC18EC4002412D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		9C9B1FBC1FC18EC4002412D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9C9B1FBD1FC18EC4002412D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		9C9B1FBE1FC18EC4002412D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		9C9B1FBF1FC18EC4002412D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
@@ -66,7 +64,6 @@
 		76D19AB998D44E7997B655EC /* Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example_Developer/Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig"; sourceTree = "<group>"; };
 		831EB09DF8B71ACFF4BC0FFD /* libPods-PTThirdPlatformKit_Example_Developer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTThirdPlatformKit_Example_Developer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E836E86F8839C9BFD3F363 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A5A10279B30A25991187B2F /* Pods-PTThirdPlatformKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTThirdPlatformKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTThirdPlatformKit_Example/Pods-PTThirdPlatformKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9C5E24EE1FC295EE0009BC14 /* DTShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTShareKit.framework; sourceTree = "<group>"; };
 		9C5E24F01FC2960B0009BC14 /* PTDingTalkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDingTalkManager.h; sourceTree = "<group>"; };
@@ -164,7 +161,6 @@
 				9C7285FF1FB9A7FC008D27A5 /* PTConstants.h */,
 				6003F59C195388D20070C39A /* PTAppDelegate.h */,
 				6003F59D195388D20070C39A /* PTAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* PTViewController.h */,
 				6003F5A6195388D20070C39A /* PTViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -295,7 +291,7 @@
 						DevelopmentTeam = KFL3FUXSZB;
 					};
 					9C9B1FB01FC18EC4002412D9 = {
-						DevelopmentTeam = KFL3FUXSZB;
+						DevelopmentTeam = VZ69Y4JM2D;
 					};
 				};
 			};
@@ -323,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -334,7 +329,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C9B1FBC1FC18EC4002412D9 /* Main.storyboard in Resources */,
 				9C9B1FBD1FC18EC4002412D9 /* LaunchScreen.storyboard in Resources */,
 				9C9B1FBE1FC18EC4002412D9 /* Images.xcassets in Resources */,
 				9C9B1FBF1FC18EC4002412D9 /* InfoPlist.strings in Resources */,
@@ -712,7 +706,7 @@
 			baseConfigurationReference = 76D19AB998D44E7997B655EC /* Pods-PTThirdPlatformKit_Example_Developer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KFL3FUXSZB;
+				DEVELOPMENT_TEAM = VZ69Y4JM2D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PTThirdPlatformKit/CustomInjectPlatform/DingTalk",
@@ -769,7 +763,7 @@
 					"\"UIKit\"",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qingot.Plush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PT_Developer = YES;
 				WRAPPER_EXTENSION = app;
@@ -781,7 +775,7 @@
 			baseConfigurationReference = EEADE74070FD2397E6B0FEC8 /* Pods-PTThirdPlatformKit_Example_Developer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KFL3FUXSZB;
+				DEVELOPMENT_TEAM = VZ69Y4JM2D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PTThirdPlatformKit/CustomInjectPlatform/DingTalk",
@@ -838,7 +832,7 @@
 					"\"UIKit\"",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qingot.Plush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PT_Developer = YES;
 				WRAPPER_EXTENSION = app;

@@ -49,7 +49,8 @@ DEF_SINGLETON
         //支付返回结果，实际支付结果需要去微信服务器端查询
         if (self.delegate
             && [self.delegate respondsToSelector:@selector(respManagerDidRecvPayResponse:platform:)]) {
-            [self.delegate respManagerDidRecvPayResponse:(resp.errCode == WXSuccess) platform:PTThirdPlatformTypeWechat];
+            PTPayResult payResult = resp.errCode == WXSuccess ? PTPayResultSuccess : resp.errCode == WXErrCodeUserCancel ? PTPayResultCancel : PTPayResultFailed ;
+            [self.delegate respManagerDidRecvPayResponse:payResult platform:PTThirdPlatformTypeWechat];
         }
     }
 }

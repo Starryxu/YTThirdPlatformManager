@@ -10,6 +10,7 @@
 #import "PTTencentRespManager.h"
 #import "PTTencentRequestHandler.h"
 #import "PTThirdPlatformObject.h"
+#import "QQWalletSDK.h"
 
 @interface PTTencentManager () <PTAbsThirdPlatformRespManagerDelegate>
 @end
@@ -42,6 +43,11 @@ DEF_SINGLETON
         return YES;
     }
     
+    // QQ钱包，在此函数中注册回调监听
+    if ([[QQWalletSDK sharedInstance] hanldeOpenURL:url]) {
+        return YES;
+    }
+    
     return NO;
 }
 
@@ -62,6 +68,16 @@ DEF_SINGLETON
     if (shareResult == NO) {
         !self.shareResultBlock ?: self.shareResultBlock(PTShareTypeQQ, PTShareResultFailed, nil);
     }
+}
+
+/**
+ 第三方支付
+ */
+- (void)payWithPlateform:(PTThirdPlatformType)payMethodType order:(OrderModel*)order paymentBlock:(void (^)(PTPayResult result))paymentBlock {
+    self.paymentBlock = paymentBlock;
+    // 使用QQ支付
+    [PTTencentRespManager sharedInstance].delegate = self;
+    [PTTencentRequestHandler payWithOrder:order];
 }
 
 - (BOOL)isThirdPlatformInstalled:(PTShareType)thirdPlatform {

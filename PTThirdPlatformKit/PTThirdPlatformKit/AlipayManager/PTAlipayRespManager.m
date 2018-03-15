@@ -15,13 +15,13 @@ DEF_SINGLETON
 - (void)setResponse:(NSDictionary *)response {
     // 解析 resultStatus
     NSString* resultStatusStr = [response objectForKey:@"resultStatus"];
-    BOOL result = NO;
+    NSInteger resultStatus = 0;
     if ([resultStatusStr respondsToSelector:@selector(integerValue)]) {
-        NSInteger resultStatus = [resultStatusStr integerValue];
-        result = (resultStatus == 9000);
+        resultStatus = [resultStatusStr integerValue];
     }
+    PTPayResult payResult = (resultStatus == 9000) ? PTPayResultSuccess : (resultStatus == 6001) ? PTPayResultCancel : PTPayResultFailed ;
     if ([self.delegate respondsToSelector:@selector(respManagerDidRecvPayResponse:platform:)]) {
-        [self.delegate respManagerDidRecvPayResponse:result platform:PTThirdPlatformTypeAlipay];
+        [self.delegate respManagerDidRecvPayResponse:payResult platform:PTThirdPlatformTypeAlipay];
     }
 }
 
